@@ -1,0 +1,20 @@
+- Create Remove Update Delete (CRUD) Usuário 
+-- Usuário Admin (único que já existe por padrao)
+-- Usuário Funcionário
+-- Usuário Aluno
+
+- CRUD Planos
+-- Mensal
+-- Semestral
+-- Anual
+-- Avulso
+
+- CRUD Classes
+-- Horario
+-- Dias
+-- Quantidade Maxima de Alunos
+-- Professor
+
+- CRUD Checkin
+
+- Rotina de Login/Autenticação
