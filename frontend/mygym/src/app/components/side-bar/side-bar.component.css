@@ -1,0 +1,10 @@
+.side-bar {
+  height: 100vh;
+  width: 300px;
+  color: #fff;
+  display: flex;
+  font-size: 32px;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
