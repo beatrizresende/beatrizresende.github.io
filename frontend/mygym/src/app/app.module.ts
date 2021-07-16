@@ -12,6 +12,7 @@ import { MeusDadosComponent } from './components/meus-dados/meus-dados.component
 import { DadosPessoaisComponent } from './components/meus-dados/dados-pessoais/dados-pessoais.component';
 import { DadosContatoComponent } from './components/meus-dados/dados-contato/dados-contato.component';
 import { DadosPagamentoComponent } from './components/meus-dados/dados-pagamento/dados-pagamento.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +22,12 @@ import { DadosPagamentoComponent } from './components/meus-dados/dados-pagamento
     DadosContatoComponent,
     DadosPagamentoComponent,
     SideBarComponent,
-    DefaultLayoutComponent
+    DefaultLayoutComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
