@@ -1,6 +1,6 @@
 - CRIANDO UMA BRANCH LOCAL -
 
-[  ] Certifique-se que sua branch atual seja a brach dev. 
+[ ✔︎ ] Certifique-se que sua branch atual seja a brach dev. 
 → Para saber qual sua branch atual execute o comando no terminal: git branch
 → Caso esteja em outra branch, execute o comando no terminal: git checkout dev
 
