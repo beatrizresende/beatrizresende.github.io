@@ -1,0 +1,11 @@
+.index-container {
+  color: white;
+}
+
+.route-to-login {
+  margin-top: 16px;
+}
+
+.route-to-login a { 
+  color: #fff;
+}

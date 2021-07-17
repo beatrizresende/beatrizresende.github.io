@@ -1,0 +1,8 @@
+.nav-bar-container {
+  position: absolute;
+  height: 80px;
+  width: 100%;
+  background: #fff;
+  z-index: 1;
+  border-bottom: 1px solid;
+}

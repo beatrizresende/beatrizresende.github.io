@@ -3,3 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.style-default {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  position: relative;
+  padding-top: 80px;
+}

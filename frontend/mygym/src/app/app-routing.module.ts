@@ -10,14 +10,14 @@ import { IndexComponent } from './components/index/index.component';
 
 const routes: Routes = [
   {
-    path: 'meus-dados',
-    component: LayoutComponent,
+    path: '',
+    component: DefaultLayoutComponent,
     children: [
       {
         path: '',
-        component: MeusDadosComponent,
+        component: IndexComponent,
       }
-    ],
+    ]
   },
   {
     path: 'login',
@@ -30,15 +30,15 @@ const routes: Routes = [
     ]
   },
   {
-    path: '',
-    component: DefaultLayoutComponent,
+    path: 'meus-dados',
+    component: LayoutComponent,
     children: [
       {
         path: '',
-        component: IndexComponent,
+        component: MeusDadosComponent,
       }
-    ]
-  }
+    ],
+  },
 ]
 
 @NgModule({
