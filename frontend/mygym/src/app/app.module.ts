@@ -13,6 +13,9 @@ import { DadosPessoaisComponent } from './components/meus-dados/dados-pessoais/d
 import { DadosContatoComponent } from './components/meus-dados/dados-contato/dados-contato.component';
 import { DadosPagamentoComponent } from './components/meus-dados/dados-pagamento/dados-pagamento.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { LoginComponent } from './components/login/login.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { IndexComponent } from './components/index/index.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { LayoutComponent } from './components/layout/layout.component';
     DadosPagamentoComponent,
     SideBarComponent,
     DefaultLayoutComponent,
-    LayoutComponent
+    LayoutComponent,
+    LoginComponent,
+    NavBarComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
