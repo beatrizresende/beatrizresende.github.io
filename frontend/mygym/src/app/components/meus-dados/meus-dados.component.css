@@ -1,0 +1,45 @@
+.meus-dados-container {
+  padding-top: 80px;
+}
+
+.meus-dados-container-content {
+  padding: 48px 48px;  
+}
+
+.meus-dados-container-content div {
+  margin-bottom: 24px; 
+}
+
+.dados-container {
+  width: 800px;
+  padding: 24px 24px;
+  background: var(--secundary);
+  border-radius: 8px;
+  color: var(--text);
+}
+.dados-title {
+  color: var(--text);
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.lista-dados {
+  list-style: none;
+}
+
+.lista-dados li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.lista-dados li span {
+  margin-bottom: 8px;
+}
+
+.lista-dados li span:first-child {
+  font-weight: bold;
+}
+
+
