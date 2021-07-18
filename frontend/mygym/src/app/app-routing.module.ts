@@ -7,6 +7,7 @@ import { MeusDadosComponent } from './components/meus-dados/meus-dados.component
 import { DefaultLayoutComponent } from './components/default-layout/default-layout.component';
 import { LoginComponent } from './components/login/login.component';
 import { IndexComponent } from './components/index/index.component';
+import { SobreComponent } from './components/sobre/sobre.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,16 @@ const routes: Routes = [
       {
         path: '',
         component: LoginComponent,
+      }
+    ]
+  },
+  {
+    path: 'sobre',
+    component: DefaultLayoutComponent,
+    children: [
+      {
+        path: '',
+        component: SobreComponent,
       }
     ]
   },

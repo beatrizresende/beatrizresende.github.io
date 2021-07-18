@@ -16,6 +16,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { IndexComponent } from './components/index/index.component';
+import { SobreComponent } from './components/sobre/sobre.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { IndexComponent } from './components/index/index.component';
     LayoutComponent,
     LoginComponent,
     NavBarComponent,
-    IndexComponent
+    IndexComponent,
+    SobreComponent
   ],
   imports: [
     BrowserModule,
