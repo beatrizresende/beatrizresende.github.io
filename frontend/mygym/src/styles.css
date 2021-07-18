@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --primary:  #f42ba7;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 .style-default {
@@ -9,5 +16,40 @@
   width: 100%;
   background-color: black;
   position: relative;
-  padding-top: 80px;
+  padding-top: 250px;
+}
+
+@keyframes animedown {
+  from {
+    opacity: 0;
+    transform: translateY(-25rem);
+  }
+  to {
+    transform: initial;
+  }
+}
+
+.animation-dowm {
+  animation: animedown 1.2s;
+}
+
+@keyframes anime-line-effect { 
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: initial;
+  }  
+}
+
+.line-effect {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 2px;
+  box-shadow: inset 0 0 0.5em 0 var(--primary), 0 0 0.5em 0 var(--primary);
+  animation: anime-line-effect 2s;
 }

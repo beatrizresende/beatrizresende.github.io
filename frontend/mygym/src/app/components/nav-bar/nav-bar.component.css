@@ -1,8 +1,74 @@
 .nav-bar-container {
   position: absolute;
-  height: 80px;
+  height: 250px;
   width: 100%;
-  background: #fff;
   z-index: 1;
   border-bottom: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.nav-bar-container::before {    
+  content: "";
+  background-image: url('../../../assets/academia-2.jpg');
+  background-size: cover;
+  position: absolute;
+  top: -325px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
+}
+
+.nav-bar-container-content {
+  width: 600px;
+  margin-bottom: 24px;
+}
+
+.nav-bar-logo {
+  z-index: 1;
+  position: absolute;
+  top: 141px;
+}
+
+.nav-bar-logo img {
+  width: 130px;
+  margin-right: 75px;
+}
+
+.nav-bar-container-content ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-bar-container-content li {
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
+}
+
+.nav-bar-container-content li{
+  position: relative;
+}
+
+.nav-bar-container-content li::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  top: 1.5rem;
+  left: 0;  
+  border-radius: 2px;
+  transform: scaleX(0);
+  background: var(--primary);
+  border: 1px solid var(--primary);
+  transition: transform 300ms ease;
+  box-shadow: inset 0 0 0.5em 0 var(--primary), 0 0 0.5em 0 var(--primary);  
+}
+
+.nav-bar-container-content li:hover::after {
+  transform: scaleX(1);
 }

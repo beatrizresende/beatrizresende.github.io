@@ -3,6 +3,7 @@
 }
 
 .route-to-login {
+  display: flex;
   margin-top: 16px;
 }
 
