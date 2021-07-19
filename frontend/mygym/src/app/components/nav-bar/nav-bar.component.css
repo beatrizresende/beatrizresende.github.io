@@ -1,4 +1,4 @@
-.nav-bar-container {
+.navbar-container {
   position: absolute;
   height: 250px;
   width: 100%;
@@ -10,51 +10,65 @@
   flex-direction: column;
 }
 
-.nav-bar-container::before {    
+.navbar-container::before {    
   content: "";
-  background-image: url('../../../assets/academia-2.jpg');
+  background-image: url('../../../assets/academia-5.jpg');
   background-size: cover;
+  background-position: center;
   position: absolute;
-  top: -325px;
+  top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
   opacity: 0.3;
 }
 
-.nav-bar-container-content {
+.navbar-container-content {
   width: 600px;
   margin-bottom: 24px;
 }
 
-.nav-bar-logo {
-  z-index: 1;
+.login-cadastro {
   position: absolute;
-  top: 141px;
+  display: flex;
+  top: 50px;
+  right: 100px;
+  color: var(--text);
+  list-style: none; 
 }
 
-.nav-bar-logo img {
-  width: 130px;
-  margin-right: 75px;
+.login-cadastro-item {
+  position: relative;
+  margin-right: 18px;
 }
 
-.nav-bar-container-content ul {
+.login-cadastro-link span {
+  position: relative;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.login-cadastro-icon {
+  margin-right: 8px;
+  color: var(--primary);
+}
+
+.menu-list {
   list-style: none;
   display: flex;
   justify-content: space-around;
 }
 
-.nav-bar-container-content li {
+.menu-list-item {
+  position: relative;
   cursor: pointer;
   font-size: 18px;
-  color: #fff;
+  color:  var(--text);
 }
 
-.nav-bar-container-content li{
-  position: relative;
-}
-
-.nav-bar-container-content li::after {
+.active-route::after,
+.login-cadastro-link span::after,
+.menu-list-item::after {
   content: '';
   position: absolute;
   height: 1px;
@@ -69,6 +83,32 @@
   box-shadow: inset 0 0 0.5em 0 var(--primary), 0 0 0.5em 0 var(--primary);  
 }
 
-.nav-bar-container-content li:hover::after {
+.active-route::after {
   transform: scaleX(1);
+}
+
+.login-cadastro-link span:hover::after,
+.menu-list-item:hover::after {
+  transform: scaleX(1);
+}
+
+.login-cadastro-link,
+.menu-list-item a {
+  text-decoration: none;
+}
+
+.login-cadastro-link,
+.menu-list-item a:visited {
+  color: var(--text);
+}
+
+.navbar-logo {
+  z-index: 1;
+  position: absolute;
+  top: 141px;
+}
+
+.navbar-logo img {
+  width: 130px;
+  margin-right: 75px;
 }
