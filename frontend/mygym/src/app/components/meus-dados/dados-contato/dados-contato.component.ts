@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dados-contato.component.css']
 })
 export class DadosContatoComponent implements OnInit {
+  public isOpen: boolean = true;
 
   constructor() { }
 

@@ -1,4 +1,4 @@
 .layout {
   display: flex;
-  background: #eaeaea;
+  background: var(--constrast);
 }

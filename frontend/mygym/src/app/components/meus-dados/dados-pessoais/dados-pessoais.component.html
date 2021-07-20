@@ -1,14 +1,17 @@
-<section class="dados-container">
-  <div class="dados-title">
-    <span>
+<div class="collapse-dados-container">
+  <div class="collapse-dados-container-header" (click)="isOpen = !isOpen">
+    <div class="collapse-dados-container-title">
       Dados Pessoais
-    </span>
+    </div>
+    <div class="collapse-dados-icon" [ngClass]="{'__is-open': isOpen}">
+      <i class="fas fa-chevron-down"></i>
+    </div>
   </div>
-  <div class="dados-container-content">
+  <div class="collapse-dados-container-content" *ngIf="isOpen">
     <ul class="lista-dados">
       <li>
         <span>Nome</span>
-        <span>Fulano de tal</span>
+        <span>Fulana de tal</span>
       </li>
       <li>
         <span>Sexo</span>
@@ -20,4 +23,4 @@
       </li>
     </ul>
   </div>
-</section>
+</div>

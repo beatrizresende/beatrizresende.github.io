@@ -4,6 +4,8 @@
   --primary: #f42ba7;
   --secundary: #000;
   --text: #fff;
+  --shadow: #ccc;
+  --constrast: #eaeaea;
 }
 
 * {
@@ -11,6 +13,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: var(--constrast);
 }
 
 .page {
