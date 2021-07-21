@@ -31,4 +31,8 @@ export class PlanoService {
     id: 3
     }
   ];
+
+  getPlanos() {
+    return this.planos;
+  }
 }

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { LayoutComponent } from './components/layout/layout.component';
 import { MeusDadosComponent } from './components/meus-dados/meus-dados.component';
+import { CardPlanoComponent } from './components/planos/card-plano/card-plano.component'
 
 const routes: Routes = [
   {
@@ -15,7 +16,8 @@ const routes: Routes = [
         component: MeusDadosComponent,
       }
     ],
-  }
+  },
+  { path: '', component: CardPlanoComponent}
 ]
 
 @NgModule({

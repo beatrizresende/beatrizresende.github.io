@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +14,9 @@ import { DadosPessoaisComponent } from './components/meus-dados/dados-pessoais/d
 import { DadosContatoComponent } from './components/meus-dados/dados-contato/dados-contato.component';
 import { DadosPagamentoComponent } from './components/meus-dados/dados-pagamento/dados-pagamento.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { PlanoService } from './services/plano.service';
+import { PaginaPlanoComponent } from './components/planos/pagina-plano/pagina-plano.component';
+import { BtnComprarComponent } from './components/planos/card-plano/btn-comprar/btn-comprar.component';
 
 @NgModule({
   declarations: [
@@ -23,13 +27,16 @@ import { LayoutComponent } from './components/layout/layout.component';
     DadosPagamentoComponent,
     SideBarComponent,
     DefaultLayoutComponent,
-    LayoutComponent
+    LayoutComponent,
+    PaginaPlanoComponent,
+    BtnComprarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule
   ],
-  providers: [],
+  providers: [PlanoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
