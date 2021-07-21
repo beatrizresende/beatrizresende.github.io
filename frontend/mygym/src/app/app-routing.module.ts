@@ -51,10 +51,6 @@ const routes: Routes = [
       }
     ],
   },
-<<<<<<< HEAD
-  { path: '', component: CardPlanoComponent}
-=======
->>>>>>> dev
 ]
 
 @NgModule({

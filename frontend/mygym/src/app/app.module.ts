@@ -1,5 +1,4 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';  
 
@@ -33,15 +32,12 @@ import { SobreComponent } from './components/sobre/sobre.component';
     SideBarComponent,
     DefaultLayoutComponent,
     LayoutComponent,
-<<<<<<< HEAD
     PaginaPlanoComponent,
-    BtnComprarComponent
-=======
+    BtnComprarComponent,
     LoginComponent,
     NavBarComponent,
     IndexComponent,
     SobreComponent
->>>>>>> dev
   ],
   imports: [
     BrowserModule,
