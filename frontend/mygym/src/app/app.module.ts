@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';  
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -17,6 +18,10 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { PlanoService } from './services/plano.service';
 import { PaginaPlanoComponent } from './components/planos/pagina-plano/pagina-plano.component';
 import { BtnComprarComponent } from './components/planos/card-plano/btn-comprar/btn-comprar.component';
+import { LoginComponent } from './components/login/login.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { IndexComponent } from './components/index/index.component';
+import { SobreComponent } from './components/sobre/sobre.component';
 
 @NgModule({
   declarations: [
@@ -28,8 +33,15 @@ import { BtnComprarComponent } from './components/planos/card-plano/btn-comprar/
     SideBarComponent,
     DefaultLayoutComponent,
     LayoutComponent,
+<<<<<<< HEAD
     PaginaPlanoComponent,
     BtnComprarComponent
+=======
+    LoginComponent,
+    NavBarComponent,
+    IndexComponent,
+    SobreComponent
+>>>>>>> dev
   ],
   imports: [
     BrowserModule,

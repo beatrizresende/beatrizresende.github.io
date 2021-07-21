@@ -1,4 +1,4 @@
-.side-bar {
+.side-bar-container {
   height: 100vh;
   width: 300px;
   color: #fff;
@@ -7,4 +7,5 @@
   align-items: center;
   justify-content: center;
   background-color: black;
+  position: fixed;
 }

@@ -1,1 +1,26 @@
-<p>dados-contato works!</p>
+<div class="collapse-dados-container">
+  <div class="collapse-dados-container-header" (click)="isOpen = !isOpen">
+    <div class="collapse-dados-container-title">
+      Dados de Contato
+    </div>
+    <div class="collapse-dados-icon" [ngClass]="{'__is-open': isOpen}">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </div>
+  <div class="collapse-dados-container-content" *ngIf="isOpen">
+    <ul class="lista-dados">
+      <li>
+        <span>E-mail</span>
+        <span>fulano@gmail.com</span>
+      </li>
+      <li>
+        <span>Telefone</span>
+        <span>(00) 0000-0000</span>
+      </li>
+      <li>
+        <span>Whatsapp</span>
+        <span>(00) 00000-0000</span>
+      </li>
+    </ul>
+  </div>
+</div>

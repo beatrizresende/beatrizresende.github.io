@@ -1,0 +1,37 @@
+- CRIANDO UMA BRANCH LOCAL -
+
+[ ✔︎ ] Certifique-se que sua branch atual seja a brach dev. 
+→ Para saber qual sua branch atual execute o comando no terminal: git branch
+→ Caso esteja em outra branch, execute o comando no terminal: git checkout dev
+
+[  ] Após certificar-se que a branch atual é a branch dev. 
+→ Execute o comando no terminal: git checkout nome-da-branch 
+
+
+- APÓS CONCLUIR SUAS ALTERAÇÕES -
+
+[  ] Adicione os arquivos novos ou alterados ao seu diretório. 
+→ Execute o comando no terminal: git add .
+
+[  ] Faça o commit das alteração. 
+→ Execute os comando no terminal: git commit -m "aqui vai a descrição das alterações"
+
+
+- FAZENDO O MERGE COM A BRANCH DEV -
+[  ] Faça o checkout para a branch dev. 
+→ Execute o comando no terminal: git checkout dev
+
+[  ] Atualize sua branch dev local com a branch dev remota. 
+→ Execute o comando no terminal: git pull origin dev
+
+[  ] Faça o merge da sua branch local com a branch dev. 
+→ Execute o comando no terminal: git merge nome-da-branch
+
+[  ] Repita o processo de adicionar os arquivos novos ou alterados, porém agora sua branch atual é a branch dev. 
+→ Execute o com no terminal:  git add .
+
+[  ] Repita o processo do commit das aletarções, porém agora sua branch atual é a branch dev. 
+→ Execute os comando no terminal: git commit -m "aqui vai a descrição das alterações"
+
+[  ] Atualize a branch dev remota com as suas alterações já comitadas. 
+→ Execute os comando no terminal: git push origin dev

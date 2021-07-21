@@ -1,1 +1,26 @@
-<p>dados-pessoais works!</p>
+<div class="collapse-dados-container">
+  <div class="collapse-dados-container-header" (click)="isOpen = !isOpen">
+    <div class="collapse-dados-container-title">
+      Dados Pessoais
+    </div>
+    <div class="collapse-dados-icon" [ngClass]="{'__is-open': isOpen}">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </div>
+  <div class="collapse-dados-container-content" *ngIf="isOpen">
+    <ul class="lista-dados">
+      <li>
+        <span>Nome</span>
+        <span>Fulana de tal</span>
+      </li>
+      <li>
+        <span>Sexo</span>
+        <span>Masculino</span>
+      </li>
+      <li>
+        <span>Data de nascimento</span>
+        <span>01/01/2001</span>
+      </li>
+    </ul>
+  </div>
+</div>
