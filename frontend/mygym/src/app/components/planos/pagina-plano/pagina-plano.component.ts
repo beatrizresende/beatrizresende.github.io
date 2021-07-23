@@ -15,6 +15,4 @@ export class PaginaPlanoComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  arrayPlanos: Plano[] = this.planoService.getPlanos();
 }

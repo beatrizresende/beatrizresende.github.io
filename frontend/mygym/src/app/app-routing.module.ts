@@ -51,6 +51,7 @@ const routes: Routes = [
       }
     ],
   },
+  { path: 'planos', component: CardPlanoComponent}
 ]
 
 @NgModule({

@@ -1,10 +1,67 @@
-<h2> works 1!</h2>
-<div *ngFor="let plano of arrayPlanos">
-    <h3>works!</h3>
-    <!-- <div class="card">
-    <img src="{{plano.imgSrc}}">
-    <h4>R${{plano.preco}}</h4>
+<!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner"> -->
+<div class="previous-arrow">
+    <button (click)="onClickPrevious()"><img src="../../../../assets/imgs/PREVIOUS-ARROW"></button>
+</div>
+
+<div class="carousel">
+
+        <div *ngFor="let plano of planos; let i = index" class="first-slide">
+    <div *ngIf="i === firstSlide" class="card">
+        <div class="card-img">
+    <img class="card-img-fit" src="{{ plano.imgPath }}">
+</div>
+<div class="card-body">
+    <h2 class="plano-titulo">{{ plano.titulo }}</h2>
+    <div class="preco">
+    <h4>R${{ plano.preco }}</h4>
     <h6>/mês</h6>
-    <btn-comprar><btn-comprar>
-</div> -->
+</div>
+<div class="botoes">
+    <app-btn-ver-mais class="botoes"></app-btn-ver-mais><app-btn-comprar-card class-="botoes"></app-btn-comprar-card>
+</div>
+</div>
+</div>
+</div>
+
+<div *ngFor="let plano of planos; let i = index" class="second-slide">
+    <div *ngIf="i === secondSlide" class="card">
+        <div class="card-img">
+    <img class="card-img-fit" src="{{ plano.imgPath }}">
+</div>
+<div class="card-body">
+    <h2 class="plano-titulo">{{ plano.titulo }}</h2>
+    <div class="preco">
+    <h4>R${{ plano.preco }}</h4>
+    <h6>/mês</h6>
+</div>
+<div class="botoes">
+    <app-btn-ver-mais class="botoes"></app-btn-ver-mais><app-btn-comprar-card class-="botoes"></app-btn-comprar-card>
+</div>
+</div>
+</div>
+</div>
+
+<div *ngFor="let plano of planos; let i = index" class="third-slide">
+    <div *ngIf="i === thirdSlide" class="card">
+        <div class="card-img">
+    <img class="card-img-fit" src="{{ plano.imgPath }}">
+</div>
+<div class="card-body">
+    <h2 class="plano-titulo">{{ plano.titulo }}</h2>
+    <div class="preco">
+    <h4>R${{ plano.preco }}</h4>
+    <h6>/mês</h6>
+</div>
+<div class="botoes">
+    <app-btn-ver-mais class="botoes"></app-btn-ver-mais><app-btn-comprar-card class-="botoes"></app-btn-comprar-card>
+</div>
+</div>
+</div>
+</div>
+
+<div class="next-arrow">
+    <button (click)="onClickNext()"><img src="../../../../assets/imgs/NEXT-ARROW"></button>
+</div>
+
 </div>

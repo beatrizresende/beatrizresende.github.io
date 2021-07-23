@@ -16,11 +16,13 @@ import { DadosPagamentoComponent } from './components/meus-dados/dados-pagamento
 import { LayoutComponent } from './components/layout/layout.component';
 import { PlanoService } from './services/plano.service';
 import { PaginaPlanoComponent } from './components/planos/pagina-plano/pagina-plano.component';
-import { BtnComprarComponent } from './components/planos/card-plano/btn-comprar/btn-comprar.component';
+import { BtnVerMaisComponent } from './components/planos/card-plano/btn-ver-mais/btn-ver-mais.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { IndexComponent } from './components/index/index.component';
 import { SobreComponent } from './components/sobre/sobre.component';
+import { CardPlanoComponent } from './components/planos/card-plano/card-plano.component';
+import { BtnComprarCardComponent } from './components/planos/card-plano/btn-comprar-card/btn-comprar-card.component';
 
 @NgModule({
   declarations: [
@@ -33,11 +35,13 @@ import { SobreComponent } from './components/sobre/sobre.component';
     DefaultLayoutComponent,
     LayoutComponent,
     PaginaPlanoComponent,
-    BtnComprarComponent,
     LoginComponent,
     NavBarComponent,
     IndexComponent,
-    SobreComponent
+    SobreComponent,
+    CardPlanoComponent,
+    BtnVerMaisComponent,
+    BtnComprarCardComponent
   ],
   imports: [
     BrowserModule,
