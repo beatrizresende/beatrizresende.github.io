@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { Plano } from 'src/app/models/plano.model';
 import { PlanoService } from 'src/app/services/plano.service';
 

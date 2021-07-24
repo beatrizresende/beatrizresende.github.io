@@ -21,6 +21,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { IndexComponent } from './components/index/index.component';
 import { SobreComponent } from './components/sobre/sobre.component';
 import { CardPlanoComponent } from './components/planos/card-plano/card-plano.component';
+import { BtnVoltarComponent } from './components/btn-voltar/btn-voltar.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { CardPlanoComponent } from './components/planos/card-plano/card-plano.co
     NavBarComponent,
     IndexComponent,
     SobreComponent,
-    CardPlanoComponent
+    CardPlanoComponent,
+    BtnVoltarComponent
   ],
   imports: [
     BrowserModule,
