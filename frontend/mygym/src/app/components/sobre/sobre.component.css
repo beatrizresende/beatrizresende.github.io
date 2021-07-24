@@ -1,6 +1,7 @@
 .sobre-container{
+    padding: 20px 40px;
     color: white;
-    height: 100vh;
+    background: var(--secundary);
 }
 .sobre{
 
