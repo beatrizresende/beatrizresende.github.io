@@ -9,6 +9,7 @@ import { DefaultLayoutComponent } from './components/default-layout/default-layo
 import { LoginComponent } from './components/login/login.component';
 import { IndexComponent } from './components/index/index.component';
 import { SobreComponent } from './components/sobre/sobre.component';
+import { PaginaPlanoComponent } from './components/planos/pagina-plano/pagina-plano.component';
 
 const routes: Routes = [
   {
@@ -51,7 +52,28 @@ const routes: Routes = [
       }
     ],
   },
-  { path: 'planos', component: CardPlanoComponent}
+  // { 
+  //   path: 'planos',
+  //   component: DefaultLayoutComponent,
+  //   children: [
+  //     {
+  //       path: '',
+  //       component: CardPlanoComponent 
+  //     }
+  //   ]
+  // },
+  // { 
+  //   path: 'planos/:id',
+  //   component: DefaultLayoutComponent,
+  //   children: [
+  //     {
+  //       path: '',
+  //       component: PaginaPlanoComponent 
+  //     }
+  //   ]
+  // }
+  { path: 'planos', component: CardPlanoComponent },
+  { path: 'planos/:id', component: PaginaPlanoComponent }
 ]
 
 @NgModule({

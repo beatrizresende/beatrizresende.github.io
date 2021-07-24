@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Plano } from 'src/app/models/plano.model';
 import { PlanoService } from 'src/app/services/plano.service';
 
@@ -9,10 +10,18 @@ import { PlanoService } from 'src/app/services/plano.service';
 })
 export class PaginaPlanoComponent implements OnInit {
 
-  constructor(
-    private planoService: PlanoService
+  planos: Plano[];
+  planoId: number;
+
+    constructor(
+    private planoService: PlanoService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
+    this.planos = this.planoService.planos;
+    this.route.params.subscribe(params: Params => {
+      this.planoId = +params.id;
+    })
   }
 }

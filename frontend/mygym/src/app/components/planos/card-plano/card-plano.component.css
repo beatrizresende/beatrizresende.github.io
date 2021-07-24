@@ -1,53 +1,147 @@
 .carousel {
     display: flex;
     justify-items: center;
-    align-items: center;
+    justify-content: center;
+    background-color:#F42FA5;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 .card {
+    margin: 10px 10px 10px 10px;
     background-color: black;
     border: 2px solid black;
     border-radius: 20px;
     color: white;
-    transition: all .3s ease-in-out;
-    width: 17%;
-    height: 23%;
-    transition: all .3s ease-in-out;
+    transition: all .25s ease-in-out;
+    width: 15rem;
+    height: 15rem;
 }
 .plano-titulo {
-    font-size: 17px;
+    padding-left: 7px;
+    padding-bottom: 7px;
+    font-size: 20px;
+    transition: all .25s ease-in-out;
 }
 h4, h6, .botoes {
     display: inline-block;
+    transition: all .25s ease-in-out;
 }
 h4 {
-    font-size: 13px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+    font-size: 18px;
 }
 h6 {
-    font-size: 5px;
+    padding-bottom: 7px;
+    font-size: 10px;
 }
 .card:hover {
     /* offset-x | offset-y | blur-radius | spread-radius | color */
-    box-shadow: 0px 0px 4px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 4px 5px rgba(0, 0, 0, 0.3);
     transform: translate3d(0px, 0px, 0px);
-    width: 20%;
-    height: 30%;
+    width: 17rem;
+    height: 17rem;
+    cursor: pointer;
 }
 .card:hover .plano-titulo {
-    font-size: 30px;
+    font-size: 22px;
 }
 .card:hover h4 {
-    font-size: 15px;
+    font-size: 20px;
 }
 .card:hover h6 {
-    font-size: 10px;
+    font-size: 12px;
 }
 .card-img {
     border-radius: 20px 20px 0px 0px;
     height: 130px;
+    width:100%;
+    padding-bottom: 7px;
+    transition: all .25s ease-in-out;
 }
-.card-img-fit {
+.card-img-fit, .card:hover .card-img-fit {
     border-radius: 20px 20px 0px 0px;
+    height: 100%;
     width: 100%;
     object-fit: cover;
-    margin-bottom: 5px;
 }
+.card:hover .card-img {
+    height: 132px;
+}
+.botoes {
+    display: flex;
+    justify-content: center;
+    align-items:baseline;
+    font-size: 16px;
+    font-weight: bold;
+}
+.ver-mais {
+    color: #F42FA5;
+    margin-right: 10px;
+}
+.comprar {
+    background-color: #F42FA5;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+    width: 95px;
+    height: 20px;
+}
+.card:hover .ver-mais {
+    font-size: 19px;
+    transition: all .25s ease-in-out;
+}
+.card:hover .comprar {
+    font-size: 19px;
+    width: 110px;
+    height: 24px;
+    transition: all .25s ease-in-out;
+}
+.ver-mais:hover {
+    cursor: pointer;
+    text-shadow: 
+    0 0 21px #F42FA5, 
+    0 0 42px #F42FA5, 
+    0 0 82px #F42FA5, 
+    0 0 92px #F42FA5, 
+    0 0 150px #F42FA5, 
+    0 0 200px #F42FA5; 
+}
+.comprar:hover {
+    cursor: pointer;
+    box-shadow: 
+    0 0 5px #F42FA5, 
+    0 0 10px #F42FA5, 
+    0 0 15px #F42FA5;
+}
+.arrow {
+    border: 10px solid rgba(223, 223, 223, 0.85);
+    border-width: 0 10px 10px 0;
+    display: inline-block;
+    padding: 8.5px;
+    background-color: #F42FA5;
+  }
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  .arrow:hover {
+    border: 10px solid rgba(223, 223, 223, 1);
+    border-width: 0 10px 10px 0;
+    cursor: pointer;
+  }
+  .prev-arrow, .next-arrow {
+      margin-top: 122px;
+  } 
+  a {
+    text-decoration: none;
+  }
+  button {
+      border: none;
+  }
