@@ -15,9 +15,8 @@ export class BtnVoltarComponent implements OnInit {
 ) { }
 
 ngOnInit(): void {
-  this.planos = this.planoService.planos;
-  this.route.params.subscribe(next params: Params => {
-    this.planoId = +params.id;
-  })
+  // this.route.params.subscribe(next params: Params => {
+  //   this.planoId = +params.id;
+  // })
 }
 }
