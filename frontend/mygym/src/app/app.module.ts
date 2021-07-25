@@ -1,8 +1,8 @@
-import { PopupMessageComponent } from './components/popup-message/popup-message.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';  
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -40,8 +40,6 @@ import { ContatoComponent } from './components/contato/contato.component';
     IndexComponent,
     SobreComponent,
     CadastroComponent,
-    PopupMessageComponent,
-    ContatoComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +47,8 @@ import { ContatoComponent } from './components/contato/contato.component';
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    BrMaskerModule
+    BrMaskerModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,9 @@
+import { UsuarioService } from './../../services/usuario.service';
 import { FormGroup, FormBuilder, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import * as moment from 'moment';
 import { Texts } from './../../models/Texts';
-import { PopupService } from '../../services/popup.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
@@ -17,9 +17,9 @@ export class CadastroComponent implements OnInit {
   public isSubmitted: boolean = false;
 
   constructor(
-    private fb: FormBuilder,
     private router: Router,
-    private popup: PopupService,
+    private fb: FormBuilder,
+    private usuarioService: UsuarioService,
     ) { }
 
   ngOnInit(): void {
@@ -53,12 +53,10 @@ export class CadastroComponent implements OnInit {
   cadastrar() {
     this.isSubmitted = true;
 
-    if(this.form.value) {
-      console.log(this.form.value);
-      this.popup.open({
-        title: 'Sucesso!',
-        text: 'Cadastro efetuado com sucesso.',
-      }, '/login', 5000);
+    if(this.form.valid) {
+      this.usuarioService.saveUser(this.form.value).subscribe(response => {
+        this.router.navigate(['/login']);
+      });      
     }
   }
 
