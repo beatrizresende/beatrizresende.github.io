@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';  
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -47,7 +48,8 @@ import { BrMaskerModule } from 'br-mask';
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    BrMaskerModule
+    BrMaskerModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
