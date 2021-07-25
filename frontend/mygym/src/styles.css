@@ -95,3 +95,7 @@ body {
     transform: initial;
   }
 }
+
+.hidden {
+  display: none;
+}

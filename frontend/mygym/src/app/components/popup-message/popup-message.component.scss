@@ -1,0 +1,68 @@
+.Modal_Popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;  
+}
+
+.Modal_Popup_Content {
+  border-radius: 10px;
+  background: var(--text);
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: scaleUp 0.5s forwards;  
+  border: 2px solid var(--primary);
+}
+
+.Popup_Message_Content {
+  width: 500px;
+  height: 200px;
+  max-width: 800px;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.Message_Content {
+  word-wrap: break-word;
+  font-size: 24px;
+  font-family: 'Metropolis', sans-serif;
+  font-weight: bold;
+  margin-bottom: 24px;
+  color: var(--tex-input);
+}
+
+.Message_Title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: var(--tex-input);
+}
+
+@keyframes scaleUp {
+  to {
+    opacity: initial;
+    transform: initial;
+  }
+}
+
+@media (max-width: 800px){
+  .Popup_Message_Content {
+    padding: 20px 16px
+  }
+
+  .Message_Content {
+    font-size: 14px;
+  }
+
+  .Message_Title {
+    font-size: 20px;
+  }
+  
+}

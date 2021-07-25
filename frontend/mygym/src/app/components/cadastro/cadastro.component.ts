@@ -1,8 +1,9 @@
+import { FormGroup, FormBuilder, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import * as moment from 'moment';
 import { Texts } from './../../models/Texts';
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
-import { Router } from '@angular/router';
+import { PopupService } from '../../services/popup.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -18,6 +19,7 @@ export class CadastroComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
+    private popup: PopupService,
     ) { }
 
   ngOnInit(): void {
@@ -53,7 +55,10 @@ export class CadastroComponent implements OnInit {
 
     if(this.form.value) {
       console.log(this.form.value);
-      this.router.navigate(['/login']);
+      this.popup.open({
+        title: 'Sucesso!',
+        text: 'Cadastro efetuado com sucesso.',
+      }, '/login', 5000);
     }
   }
 

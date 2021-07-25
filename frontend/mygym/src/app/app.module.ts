@@ -1,3 +1,4 @@
+import { PopupMessageComponent } from './components/popup-message/popup-message.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';  
@@ -37,7 +38,8 @@ import { BrMaskerModule } from 'br-mask';
     NavBarComponent,
     IndexComponent,
     SobreComponent,
-    CadastroComponent
+    CadastroComponent,
+    PopupMessageComponent
   ],
   imports: [
     BrowserModule,
