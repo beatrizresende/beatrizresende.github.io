@@ -13,6 +13,7 @@ export class BtnVoltarComponent implements OnInit {
   public page: string;
   public planos: Plano[];
   public planoId: number;
+  public routerLink: any;
 
   constructor(
   private route: ActivatedRoute,
@@ -20,8 +21,11 @@ export class BtnVoltarComponent implements OnInit {
 ) { }
 
 ngOnInit(): void {
-  // this.route.params.subscribe(next params: Params => {
-  //   this.planoId = +params.id;
-  // })
+  console.log('btn-voltar foi iniciado')
+}
+
+onClick() {
+  this.routerLink = this.route.root;
+  console.log(this.routerLink);
 }
 }

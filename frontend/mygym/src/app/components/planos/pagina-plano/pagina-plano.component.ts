@@ -10,22 +10,19 @@ import { PlanoService } from 'src/app/services/plano.service';
 })
 export class PaginaPlanoComponent implements OnInit {
   public planos: Plano[];
-  public plano: any;
+  public plano: Plano;
   public planoId: number;
 
   constructor(
     private planoService: PlanoService,
     private route: ActivatedRoute
-  ) {
-    this.route.params.subscribe(params => {
-      this.planoId =+ params.id;
-    });
-   }
+  ) { }
 
   ngOnInit(): void {
     this.planos = this.planoService.planos;
-    // this.route.params.subscribe(params: Params => {
-    //   this.planoId = +params.id;
-    // })
+    this.route.params.subscribe((params: Params) => {
+      this.planoId = params.id;
+    });
+    this.plano = this.planos[this.planoId-1];
   }
 }

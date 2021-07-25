@@ -19,7 +19,7 @@
     <h6>/mês</h6>
 </div>
 <div class="botoes">
-    <a routerLink="#" class="ver-mais">VER MAIS</a><button class="comprar">COMPRAR</button>
+    <a routerLink="/planos/{{ plano.id }}" class="ver-mais">VER MAIS</a><button class="comprar">COMPRAR</button>
 </div>
 </div>
 </div>
@@ -28,7 +28,7 @@
 
 <!--segundo plano-->
 <div *ngFor="let plano of planos; let i = index" class="second-slide">
-<a routerLink="#">
+<a routerLink="/planos/{{ plano.id }}">
     <div *ngIf="i === secondSlide" class="card">
         <div class="card-img">
     <img class="card-img-fit" src="{{ plano.imgPath }}">
@@ -40,7 +40,7 @@
     <h6>/mês</h6>
 </div>
 <div class="botoes">
-    <a routerLink="#" class="ver-mais">VER MAIS</a><button class="comprar">COMPRAR</button>
+    <a routerLink="/planos/{{ plano.id }}" class="ver-mais">VER MAIS</a><button class="comprar">COMPRAR</button>
 </div>
 </div>
 </div>
@@ -49,7 +49,7 @@
 
 <!--terceiro plano-->
 <div *ngFor="let plano of planos; let i = index" class="third-slide">
-<a routerLink="#">
+<a routerLink="/planos/{{ plano.id }}">
     <div *ngIf="i === thirdSlide" class="card">
         <div class="card-img">
     <img class="card-img-fit" src="{{ plano.imgPath }}">
@@ -61,7 +61,7 @@
     <h6>/mês</h6>
 </div>
 <div class="botoes">
-    <a routerLink="#" class="ver-mais">VER MAIS</a><button class="comprar">COMPRAR</button>
+    <a routerLink="/planos/{{ plano.id }}" class="ver-mais">VER MAIS</a><button class="comprar">COMPRAR</button>
 </div>
 </div>
 </div>

@@ -1,4 +1,9 @@
-button { border: none; }
+button { 
+    border: none; 
+}
 .fa-chevron-circle-left {
     color: #F42FA5;
+}
+button:hover {
+    cursor: pointer;
 }
