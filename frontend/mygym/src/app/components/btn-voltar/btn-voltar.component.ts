@@ -1,5 +1,7 @@
+import { Plano } from 'src/app/models/plano.model';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { PlanoService } from 'src/app/services/plano.service';
 
 @Component({
   selector: 'app-btn-voltar',
@@ -8,10 +10,13 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class BtnVoltarComponent implements OnInit {
   
-  page: string;
+  public page: string;
+  public planos: Plano[];
+  public planoId: number;
 
   constructor(
-  private route: ActivatedRoute
+  private route: ActivatedRoute,
+  private planoService: PlanoService,
 ) { }
 
 ngOnInit(): void {

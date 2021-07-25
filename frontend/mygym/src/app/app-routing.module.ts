@@ -52,28 +52,20 @@ const routes: Routes = [
       }
     ],
   },
-  // { 
-  //   path: 'planos',
-  //   component: DefaultLayoutComponent,
-  //   children: [
-  //     {
-  //       path: '',
-  //       component: CardPlanoComponent 
-  //     }
-  //   ]
-  // },
-  // { 
-  //   path: 'planos/:id',
-  //   component: DefaultLayoutComponent,
-  //   children: [
-  //     {
-  //       path: '',
-  //       component: PaginaPlanoComponent 
-  //     }
-  //   ]
-  // }
-  { path: 'planos', component: CardPlanoComponent },
-  { path: 'planos/:id', component: PaginaPlanoComponent }
+  { 
+    path: 'planos',
+    component: DefaultLayoutComponent,
+    children: [
+      {
+        path: '',
+        component: CardPlanoComponent 
+      },
+      {
+        path: ':id',
+        component: PaginaPlanoComponent 
+      }
+    ]
+  }, 
 ]
 
 @NgModule({

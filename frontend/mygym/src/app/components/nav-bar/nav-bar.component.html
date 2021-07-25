@@ -1,5 +1,6 @@
 <div class="navbar-container">  
   <nav class="navbar-container-content">
+    
     <ul class="login-cadastro">
       <li class="login-cadastro-item">
         <i class="fas fa-external-link-square-alt login-cadastro-icon"></i>
@@ -17,7 +18,7 @@
     
     <ul class="menu-list">
       <li class="menu-list-item">
-        <a>Planos</a>
+        <a [routerLink]="['/planos']" routerLinkActive="active-route">Planos</a>
       </li>
       <li class="menu-list-item">
         <a [routerLink]="['/sobre']" routerLinkActive="active-route">Sobre</a>

@@ -9,10 +9,10 @@ import { PlanoService } from '../../../services/plano.service'
 })
 export class CardPlanoComponent implements OnInit {
 
-  planos: Plano[];
-  firstSlide: number = 0;
-  secondSlide: number = 1;
-  thirdSlide: number = 2;
+  public planos: Plano[];
+  public firstSlide: number = 0;
+  public secondSlide: number = 1;
+  public thirdSlide: number = 2;
 
   constructor(
     private planoService: PlanoService

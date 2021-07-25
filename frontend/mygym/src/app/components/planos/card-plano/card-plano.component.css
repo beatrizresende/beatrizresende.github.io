@@ -2,7 +2,7 @@
     display: flex;
     justify-items: center;
     justify-content: center;
-    background-color:#F42FA5;
+    background-color:var(--primary);
     margin-top: 40px;
     margin-bottom: 40px;
 }
@@ -76,11 +76,11 @@ h6 {
     font-weight: bold;
 }
 .ver-mais {
-    color: #F42FA5;
+    color: var(--primary);
     margin-right: 10px;
 }
 .comprar {
-    background-color: #F42FA5;
+    background-color: var(--primary);
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -102,26 +102,26 @@ h6 {
 .ver-mais:hover {
     cursor: pointer;
     text-shadow: 
-    0 0 21px #F42FA5, 
-    0 0 42px #F42FA5, 
-    0 0 82px #F42FA5, 
-    0 0 92px #F42FA5, 
-    0 0 150px #F42FA5, 
-    0 0 200px #F42FA5; 
+    0 0 21px var(--primary) 
+    0 0 42px var(--primary) 
+    0 0 82px var(--primary) 
+    0 0 92px var(--primary) 
+    0 0 150px var(--primary) 
+    0 0 200px var(--primary) 
 }
 .comprar:hover {
     cursor: pointer;
     box-shadow: 
-    0 0 5px #F42FA5, 
-    0 0 10px #F42FA5, 
-    0 0 15px #F42FA5;
+    0 0 5px var(--primary) 
+    0 0 10px var(--primary) 
+    0 0 15px var(--primary);
 }
 .arrow {
     border: 10px solid rgba(223, 223, 223, 0.85);
     border-width: 0 10px 10px 0;
     display: inline-block;
     padding: 8.5px;
-    background-color: #F42FA5;
+    background-color: var(--primary);
   }
   .right {
     transform: rotate(-45deg);
