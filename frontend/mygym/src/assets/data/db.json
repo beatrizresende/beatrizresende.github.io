@@ -1,22 +1,58 @@
 {
- "cars": [
-   {
-     "id": 1,
-     "model": "BMW X7",
-     "color": "Preto",
-     "price": 455.95
-   },
-   {
-     "id": 2,
-     "model": "Mercedes benz c180",
-     "color": "Azul",
-     "price": 194.9
-   },
-   {
-     "id": 3,
-     "model": "Land Rover Range Rover Velar",
-     "color": "Branco",
-     "price": 377.38
-   }
- ]
+  "usuarios": [
+    {
+      "nome": "teste",
+      "cpf": "222.222.222-22",
+      "dataNascimento": "01/01/2000",
+      "email": "t@t1.com",
+      "telefone": "(22) 2222-2222",
+      "senha": "123456",
+      "id": 1
+    },
+    {
+      "nome": "teste",
+      "cpf": "222.222.222-22",
+      "dataNascimento": "01/01/2000",
+      "email": "t@t2.com",
+      "telefone": "(22) 2222-2222",
+      "senha": "123456",
+      "id": 1
+    },
+    {
+      "nome": "teste",
+      "cpf": "222.222.222-22",
+      "dataNascimento": "01/01/2000",
+      "email": "t@t3.com",
+      "telefone": "(22) 2222-2222",
+      "senha": "123456",
+      "id": 1
+    },
+    {
+      "nome": "teste",
+      "cpf": "222.222.222-22",
+      "dataNascimento": "01/01/2000",
+      "email": "t@t4.com",
+      "telefone": "(22) 2222-2222",
+      "senha": "123456",
+      "id": 1
+    },
+    {
+      "nome": "teste",
+      "cpf": "222.222.222-22",
+      "dataNascimento": "01/01/2000",
+      "email": "t@t5.com",
+      "telefone": "(22) 2222-2222",
+      "senha": "123456",
+      "id": 1
+    },
+    {
+      "nome": "teste",
+      "cpf": "222.222.222-22",
+      "dataNascimento": "01/01/2000",
+      "email": "t@t5.com",
+      "telefone": "(22) 2222-2222",
+      "senha": "123456",
+      "id": 1
+    }
+  ]
 }

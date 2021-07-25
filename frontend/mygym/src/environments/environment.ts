@@ -3,8 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
+  production: false,
+  api: {
+    host: 'http://localhost:3000',
+    endpoints: {
+      methods: {
+        usuarios: '/usuarios',
+      }
+    }
+  }
+}
 
 /*
  * For easier debugging in development mode, you can import the following file
