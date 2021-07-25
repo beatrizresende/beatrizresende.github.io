@@ -1,6 +1,23 @@
 <div class="style-default">
   <div class="login-container">
-    <p>Aqui é o Componente de LOGIN</p>
-    
+    <div id="login-form" class="form-container">
+      <div class="form-box">
+        <form>
+          <label for="user">
+            <h3 class="required" >Usuário:</h3>
+            <input type="text" id="user" name="user" value="" placeholder="Seu nome de usuario" required="required" tabindex="1" autofocus="autofocus" />
+          </label> 
+      
+          <label for="password">
+            <h3 class="required">Senha:*</h3> 
+            <input type="password" id="pass" name="pass" value="" placeholder="Sua senha" required="required"/>
+          </label>
+
+          <div>		           
+            <button name="submit" type="submit" id="submit" >LOG IN</button> 
+          </div>
+        </form>
+      </div>
+    </div>
   </div> 
 </div>

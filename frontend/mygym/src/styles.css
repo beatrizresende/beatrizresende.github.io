@@ -87,6 +87,33 @@ body {
   animation: animeleft 0.5s forwards;
 }
 
+/* Estilização mensagens de alerta */
+
+#failure, #success {
+  color: #6EA070; 
+  display:none;  
+}
+
+.alert-danger {
+   color: #721c24;
+   background-color: #f8d7da;
+   border-color: #f5c6cb;
+}
+
+.alert-success {
+   color: #155724;
+   background-color: #d4edda;
+   border-color: #c3e6cb;
+}
+
+.alert {
+   position: relative;
+   padding: .75rem 1.25rem;
+   margin-bottom: 1rem;
+   border: 1px solid transparent;
+   border-radius: .25rem;
+}
+
 @keyframes animeleft {
   to {
     opacity: 1;

@@ -1,3 +1,94 @@
 .login-container {  
   color: white;
+  margin: 5%;
+}
+
+h3{  
+   margin-left:3%;  
+   margin-bottom:1px;
+   margin-top:0px;
+   font-size: 16px;
+}
+
+.form-container{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+  
+.form-box {
+   opacity: 90%;
+   padding: 2rem;
+   background:#bbbbbb;
+   border-radius:7px;
+   -webkit-border-radius:7px;
+   -moz-border-radius:7px;
+   width: 100%;
+   max-width: 500px;
+}
+
+.form-container input,   
+.form-container select
+{ 
+   font-size: 15px;  
+   margin-left: 3%;
+   width:93%;
+   background: #fff;
+   border: 0; 
+   -moz-border-radius: 4px;  
+   -webkit-border-radius: 4px;  
+   border-radius: 4px;
+   margin-bottom: 25px;  
+   padding: 5px;  
+}  
+
+
+.form-container input:focus,   
+.form-container select:focus{  
+   background-color: #ffffff; 
+}  
+
+.form-container button[type="submit"] {
+   cursor:pointer;
+   width:93%;
+   border:none;
+   background:#f42ba7;
+   color:#FFF;
+   margin:3%;
+   padding:10px;
+   border-radius:5px;
+}
+
+button[type="submit"] {
+   width:93%;
+}
+
+.form-container button[type="submit"]:hover {
+   background:#FFF;
+   color:#f42ba7;
+   border:1px solid;
+}
+
+.form-container button[type="submit"]:active {
+   box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
+}
+
+input:required, textarea:required{  
+   box-shadow: none;
+   -moz-box-shadow: none;  
+   -webkit-box-shadow: none;  
+   -o-box-shadow: none;  
+} 
+
+.required {  
+   font-weight:bold;  
+   color: #E5E6E7;      
+}
+
+/* Make form look nice on smaller screens */
+@media (max-width: 500px) {
+   .form-container {
+      width: 100%;
+   }
 }
