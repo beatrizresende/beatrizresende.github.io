@@ -1,5 +1,8 @@
+import { PopupMessageComponent } from './components/popup-message/popup-message.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';  
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -17,6 +20,9 @@ import { LoginComponent } from './components/login/login.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { IndexComponent } from './components/index/index.component';
 import { SobreComponent } from './components/sobre/sobre.component';
+import { CadastroComponent } from './components/cadastro/cadastro.component';
+
+import { BrMaskerModule } from 'br-mask';
 
 @NgModule({
   declarations: [
@@ -31,11 +37,17 @@ import { SobreComponent } from './components/sobre/sobre.component';
     LoginComponent,
     NavBarComponent,
     IndexComponent,
-    SobreComponent
+    SobreComponent,
+    CadastroComponent,
+    PopupMessageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
+    BrMaskerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

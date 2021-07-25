@@ -8,6 +8,7 @@ import { DefaultLayoutComponent } from './components/default-layout/default-layo
 import { LoginComponent } from './components/login/login.component';
 import { IndexComponent } from './components/index/index.component';
 import { SobreComponent } from './components/sobre/sobre.component';
+import { CadastroComponent } from './components/cadastro/cadastro.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,16 @@ const routes: Routes = [
       {
         path: '',
         component: LoginComponent,
+      }
+    ]
+  },
+  {
+    path: 'cadastro',
+    component: DefaultLayoutComponent,
+    children: [
+      {
+        path: '',
+        component: CadastroComponent,
       }
     ]
   },

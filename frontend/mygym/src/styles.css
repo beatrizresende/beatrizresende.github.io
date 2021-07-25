@@ -4,8 +4,10 @@
   --primary: #f42ba7;
   --secundary: #000;
   --text: #fff;
+  --text-input: #707070;
   --shadow: #ccc;
   --constrast: #eaeaea;
+  --danger: #fd2727;
 }
 
 * {
@@ -119,4 +121,8 @@ body {
     opacity: 1;
     transform: initial;
   }
+}
+
+.hidden {
+  display: none;
 }
