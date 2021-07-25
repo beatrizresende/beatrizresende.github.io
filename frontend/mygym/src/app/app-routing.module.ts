@@ -1,3 +1,4 @@
+import { ContatoComponent } from './components/contato/contato.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -10,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { IndexComponent } from './components/index/index.component';
 import { SobreComponent } from './components/sobre/sobre.component';
 import { PaginaPlanoComponent } from './components/planos/pagina-plano/pagina-plano.component';
+import { CadastroComponent } from './components/cadastro/cadastro.component';
 
 const routes: Routes = [
   {
@@ -33,12 +35,32 @@ const routes: Routes = [
     ]
   },
   {
+    path: 'cadastro',
+    component: DefaultLayoutComponent,
+    children: [
+      {
+        path: '',
+        component: CadastroComponent,
+      }
+    ]
+  },
+  {
     path: 'sobre',
     component: DefaultLayoutComponent,
     children: [
       {
         path: '',
         component: SobreComponent,
+      }
+    ]
+  },
+  {
+    path: 'contato',
+    component: DefaultLayoutComponent,
+    children: [
+      {
+        path: '',
+        component: ContatoComponent,
       }
     ]
   },

@@ -1,21 +1,21 @@
-<div class="navbar-container">  
+<div class="navbar-container">
   <nav class="navbar-container-content">
     
     <ul class="login-cadastro">
       <li class="login-cadastro-item">
         <i class="fas fa-external-link-square-alt login-cadastro-icon"></i>
         <a class="login-cadastro-link" [routerLink]="['/login']" routerLinkActive="active-route">
-          <span>Login</span> 
+          <span>Login</span>
         </a>
       </li>
       <li class="login-cadastro-item">
         <i class="fas fa-external-link-square-alt login-cadastro-icon"></i>
-        <a class="login-cadastro-link">
+        <a class="login-cadastro-link" [routerLink]="['/cadastro']" routerLinkActive="active-route">
           <span>Cadastro</span>
         </a>
       </li>
     </ul>
-    
+
     <ul class="menu-list">
       <li class="menu-list-item">
         <a [routerLink]="['/planos']" routerLinkActive="active-route">Planos</a>
@@ -27,7 +27,7 @@
         <a>Agendamento</a>
       </li>
       <li class="menu-list-item">
-        <a>Contato</a>
+        <a [routerLink]="['/contato']" routerLinkActive="active-route">Contato</a>
       </li>
     </ul>
   </nav>

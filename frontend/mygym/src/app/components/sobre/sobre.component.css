@@ -1,3 +1,22 @@
 .sobre-container{
+    padding: 20px 40px;
     color: white;
+    background: var(--secundary);
+}
+.sobre{
+
+    width: 50%;
+    display:inline-block;
+
+}
+.imagemLocal{
+
+    width: 80%;
+    display: inline-block;
+
+}
+#local{
+
+    width: 30%;
+    
 }
