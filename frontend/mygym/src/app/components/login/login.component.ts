@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Texts } from 'src/app/models/Texts';
-import { PopupService } from 'src/app/services/popup.service';
 
 @Component({
   selector: 'app-login',
@@ -15,8 +14,7 @@ export class LoginComponent implements OnInit {
   public errMessages = Texts;
 
   constructor(
-    private fb: FormBuilder,
-    private popup: PopupService,
+    private fb: FormBuilder
   ) { }
 
   ngOnInit(): void {
