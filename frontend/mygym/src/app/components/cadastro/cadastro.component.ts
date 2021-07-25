@@ -30,7 +30,7 @@ export class CadastroComponent implements OnInit {
     this.form = this.fb.group({
       nome: ['', [Validators.required]],
       cpf: ['', Validators.compose([Validators.required, this.validateCpf])],
-      dataNascimento: ['', Validators.compose([Validators.required, this.validadeBday])],
+      dataNascimento: ['', Validators.compose([Validators.required, this.validateBday])],
       email: ['', Validators.compose([Validators.required, Validators.email])],
       telefone: ['', Validators.compose([Validators.required, this.validatePhoneNumber])],
       senha: ['', Validators.compose([Validators.required, this.validatePassword])],
@@ -103,11 +103,12 @@ export class CadastroComponent implements OnInit {
     return null
   }
 
-  validadeBday(control: AbstractControl) : ValidationErrors | null {    
+  validateBday(control: AbstractControl) : ValidationErrors | null {    
     const date = moment(control.value, 'DD/MM/YYYY');
-    const today = moment(new Date(), 'DD/MM/YYYY');        
+    const today = moment(new Date(), 'DD/MM/YYYY');
+    const older = moment(new Date('01/01/1900'), 'DD/MM/YYYY');
 
-    if(!date.isValid() || !date.isBefore(today)) {
+    if(!date.isValid() || !date.isBefore(today) || (date < older)) {
       return { validadeBday: true };
     }
     return null;    
