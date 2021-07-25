@@ -1,3 +1,4 @@
+import { ContatoComponent } from './components/contato/contato.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -48,6 +49,16 @@ const routes: Routes = [
       {
         path: '',
         component: SobreComponent,
+      }
+    ]
+  },
+  {
+    path: 'contato',
+    component: DefaultLayoutComponent,
+    children: [
+      {
+        path: '',
+        component: ContatoComponent,
       }
     ]
   },

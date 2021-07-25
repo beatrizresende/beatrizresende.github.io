@@ -1,0 +1,5 @@
+.contato-container {
+  margin: 5%;
+  color: var(--text);
+  background-color: var(--secundary);
+}

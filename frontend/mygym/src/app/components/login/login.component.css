@@ -1,53 +1,52 @@
-.login-container {  
-  color: white;
+.login-container {
   margin: 5%;
-}
-
-h3{  
-   margin-left:3%;  
-   margin-bottom:1px;
-   margin-top:0px;
-   font-size: 16px;
+  color: var(--secundary);
 }
 
 .form-container{
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
+   width: 525px;
+   margin: 0 auto;
+   border-radius: 8px;
+   color: var(--secundary);
+   background: var(--constrast);
+   padding: 32px;
 }
-  
+
+.form-label{
+   margin-bottom: 8px;
+   font-weight: 600;
+   font-size: 1.2rem;
+}
+
 .form-box {
    opacity: 90%;
    padding: 2rem;
-   background:#bbbbbb;
-   border-radius:7px;
+   border-radius:8px;
+   background: var(--constrast);
    -webkit-border-radius:7px;
    -moz-border-radius:7px;
    width: 100%;
    max-width: 500px;
 }
 
-.form-container input,   
-.form-container select
-{ 
-   font-size: 15px;  
-   margin-left: 3%;
-   width:93%;
-   background: #fff;
-   border: 0; 
-   -moz-border-radius: 4px;  
-   -webkit-border-radius: 4px;  
-   border-radius: 4px;
-   margin-bottom: 25px;  
-   padding: 5px;  
-}  
+.form-container input
+{
+   width: 100%;
+   outline:none;
+   font-size: 14px;
+   line-height: 13px;
+   border-radius: 6px;
+   padding: 12px 10px;
+   color: var(--text-input);
+   border: 1px solid #cecece;
+   background: var(--text);
+   -webkit-tap-highlight-color: transparent;
+   margin-bottom: 25px;
+}
 
-
-.form-container input:focus,   
-.form-container select:focus{  
-   background-color: #ffffff; 
-}  
+.form-container input:focus{
+   border: 1px solid var(--primary);
+}
 
 .form-container button[type="submit"] {
    cursor:pointer;
@@ -58,6 +57,7 @@ h3{
    margin:3%;
    padding:10px;
    border-radius:5px;
+   box-shadow: 0 0 0 3px #dd88bc, 0 0 0 4px var(--primary);
 }
 
 button[type="submit"] {
@@ -66,24 +66,21 @@ button[type="submit"] {
 
 .form-container button[type="submit"]:hover {
    background:#FFF;
-   color:#f42ba7;
+   color:var(--primary);
    border:1px solid;
 }
 
-.form-container button[type="submit"]:active {
-   box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
+input:required, textarea:required{
+   box-shadow: none;
+   -moz-box-shadow: none;
+   -webkit-box-shadow: none;
+   -o-box-shadow: none;
 }
 
-input:required, textarea:required{  
-   box-shadow: none;
-   -moz-box-shadow: none;  
-   -webkit-box-shadow: none;  
-   -o-box-shadow: none;  
-} 
-
-.required {  
-   font-weight:bold;  
-   color: #E5E6E7;      
+error-message {
+  font-size: 13px;
+  margin-bottom: 16px;
+  color: var(--danger);
 }
 
 /* Make form look nice on smaller screens */

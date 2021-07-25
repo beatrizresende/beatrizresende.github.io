@@ -3,7 +3,7 @@ export const Texts = {
   error: {
    nome: {
     required: 'Campo obrigatório'
-   },   
+   },
    cpf: {
     required: 'Campo obrigatório',
     validateCpf: 'CPF Inválido',
@@ -24,6 +24,14 @@ export const Texts = {
     required: 'Campo obrigatório',
     validatePassword: 'A senha deve possuir no mínimo 6 caracteres.'
    },
+   user: {
+    required: 'Campo obrigatório',
+    validateUsername: 'Usuário ou senha não existem ou estão incorretos.'
+   },
+   pass: {
+    required: 'Campo obrigatório',
+    validatePasslogin: 'Usuário ou senha não existem ou estão incorretos.'
+   }
   }
  }
 };

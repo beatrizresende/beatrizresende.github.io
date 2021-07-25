@@ -1,23 +1,29 @@
 <div class="style-default">
   <div class="login-container">
-    <div id="login-form" class="form-container">
+    <div class="form-container">
       <div class="form-box">
-        <form>
-          <label for="user">
-            <h3 class="required" >Usuário:</h3>
-            <input type="text" id="user" name="user" value="" placeholder="Seu nome de usuario" required="required" tabindex="1" autofocus="autofocus" />
-          </label> 
-      
-          <label for="password">
-            <h3 class="required">Senha:*</h3> 
-            <input type="password" id="pass" name="pass" value="" placeholder="Sua senha" required="required"/>
-          </label>
+        <form [formGroup]="formGroup">
 
-          <div>		           
-            <button name="submit" type="submit" id="submit" >LOG IN</button> 
+          <label class="form-label">Usuário:</label>
+          <input type="text" formControlName="user" placeholder="Seu nome de usuario"
+            tabindex="1" autofocus="autofocus" />
+          <div [ngClass]="setClassError('user')">
+            {{ getErrorMessage('user') }}
           </div>
+
+
+          <label class="form-label">Senha:</label>
+          <input type="password" formControlName="pass" value="" placeholder="Sua senha"/>
+          <div [ngClass]="setClassError('pass')">
+            {{ getErrorMessage('pass') }}
+          </div>
+
+          <div>
+            <button name="submit" type="submit" id="submit" (click)="login()">LOG IN</button>
+          </div>
+
         </form>
       </div>
     </div>
-  </div> 
+  </div>
 </div>
