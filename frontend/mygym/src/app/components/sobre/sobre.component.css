@@ -20,3 +20,30 @@
     width: 30%;
     
 }
+footer {
+
+    padding: 40px 20px;
+
+  }
+  footer .footer-sociais {
+
+    margin-top: 30px;
+
+  }
+  footer .footer-sociais i {
+
+    font-size: 2rem;
+    margin: 10px;
+
+  }
+  .text-center {
+
+    text-align: center;
+    color: pink;
+    
+  }
+  .primary--text {
+
+    color: black;
+
+  }
