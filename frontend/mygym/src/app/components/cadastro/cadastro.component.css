@@ -1,7 +1,7 @@
 .cadastro-container {  
  color: var(--text);
  background: var(--secundary);
- padding: 40px 0px;
+ padding: 5%;
 }
 
 .cadastro-container-content {  
@@ -13,19 +13,24 @@
  padding: 32px;
 }
 
+.form-step-01,
+.form-step-02 {
+  padding: 2rem;
+}
+
 .form-group-container {
- width: 300px;
+ /* width: 300px; */
  display: flex;
- margin: 0 auto 16px auto;
+ /* margin: 0 auto 16px auto; */
  flex-direction: column;
  box-sizing: border-box;
 }
 
 .form-group-label,
 .form-group-input {
- margin-bottom: 8px;
+ margin-bottom: 12px;
  font-weight: 600;
-
+ font-size: 16px;
 }
 
 .form-group-input{
@@ -103,6 +108,9 @@
   cursor: wait;
 }
 
-.__is-error {
-  display: block;
+
+@media (max-width: 500px) {
+  .cadastro-container-content {
+     width: 100%;
+  }
 }

@@ -127,3 +127,16 @@ body {
 .hidden {
   display: none;
 }
+
+.animedown {
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: animedown 0.5s forwards;
+}
+
+@keyframes animedown {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}

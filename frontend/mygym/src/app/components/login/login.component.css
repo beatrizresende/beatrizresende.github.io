@@ -15,7 +15,8 @@
 .form-label{
    margin-bottom: 8px;
    font-weight: 600;
-   font-size: 1.2rem;
+   font-size: 16px;
+   margin-bottom: 8px;
 }
 
 .form-box {
@@ -41,7 +42,7 @@
    border: 1px solid #cecece;
    background: var(--text);
    -webkit-tap-highlight-color: transparent;
-   margin-bottom: 25px;
+   margin: 12px 0px;
 }
 
 .form-container input:focus{
