@@ -110,5 +110,10 @@
 
 .navbar-logo img {
   width: 130px;
-  margin-right: 75px;
+}
+
+@media (max-width: 500px) {
+  .navbar-container-content {
+     width: 100%;
+  }
 }

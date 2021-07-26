@@ -24,6 +24,19 @@ export const Texts = {
     required: 'Campo obrigatório',
     validatePassword: 'A senha deve possuir no mínimo 6 caracteres.'
    },
+   numeroCartao: {
+    required: 'Campo obrigatório'
+   },
+   titular: {
+    required: 'Campo obrigatório'
+   },
+   validade: {
+    required: 'Campo obrigatório',
+    validateExpDate: 'Data inválida'
+   },
+   cvc: {
+    required: 'Campo obrigatório'
+   },
    user: {
     required: 'Campo obrigatório',
     validateUsername: 'Usuário ou senha não existem ou estão incorretos.'

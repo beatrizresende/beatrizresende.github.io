@@ -1,3 +1,4 @@
+import { PageSuccessComponent } from './components/page-success/page-success.component';
 import { ContatoComponent } from './components/contato/contato.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -12,6 +13,7 @@ import { IndexComponent } from './components/index/index.component';
 import { SobreComponent } from './components/sobre/sobre.component';
 import { PaginaPlanoComponent } from './components/planos/pagina-plano/pagina-plano.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {
@@ -45,6 +47,16 @@ const routes: Routes = [
     ]
   },
   {
+    path: 'success',
+    component: DefaultLayoutComponent,
+    children: [
+      {
+        path: '',
+        component: PageSuccessComponent,
+      }
+    ]
+  },
+  {
     path: 'sobre',
     component: DefaultLayoutComponent,
     children: [
@@ -71,6 +83,16 @@ const routes: Routes = [
       {
         path: '',
         component: MeusDadosComponent,
+      }
+    ],
+  },
+  {
+    path: 'home',
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        component: HomeComponent,
       }
     ],
   },

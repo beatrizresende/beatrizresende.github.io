@@ -1,7 +1,7 @@
 .cadastro-container {  
  color: var(--text);
  background: var(--secundary);
- padding: 40px 0px;
+ padding: 5%;
 }
 
 .cadastro-container-content {  
@@ -13,19 +13,37 @@
  padding: 32px;
 }
 
+.form-step-01,
+.form-step-02,
+.form-step-03 {  
+  padding: 2rem;
+}
+
+.credit-card { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Consolas";
+  text-transform: uppercase;
+ }
+
+ .validate-cvc {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 8px;
+ }
+
 .form-group-container {
- width: 300px;
  display: flex;
- margin: 0 auto 16px auto;
  flex-direction: column;
  box-sizing: border-box;
 }
 
 .form-group-label,
 .form-group-input {
- margin-bottom: 8px;
+ margin-bottom: 12px;
  font-weight: 600;
-
+ font-size: 16px;
 }
 
 .form-group-input{
@@ -47,7 +65,7 @@
 
 .form-group-error-message {
   font-size: 13px;
-  margin-bottom: 16px;
+  margin: 0px 0px 8px 4px;
   color: var(--danger);
 }
 
@@ -66,16 +84,11 @@
 .button-container {
  display: flex;
  justify-content: center;
+ margin-right: 24px;
 }
 
 .back-butom {
-  position: relative;
-}
-
-.back-butom i {
-  position: absolute;
-  right: 24px;
-  top: -16px;
+  margin-right: 16px;
 }
 
 .button-container-content {
@@ -103,6 +116,8 @@
   cursor: wait;
 }
 
-.__is-error {
-  display: block;
+@media (max-width: 500px) {
+  .cadastro-container-content {
+     width: 100%;
+  }
 }

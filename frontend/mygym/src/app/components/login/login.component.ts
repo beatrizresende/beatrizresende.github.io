@@ -46,11 +46,10 @@ export class LoginComponent implements OnInit {
     if (this.formGroup.valid){
 
       this.usuarioService.getUsers().subscribe(res=> {
-        console.log(res);
         res.find(usuario=> {
-          if((usuario.email==this.formGroup.get('user').value)
-            &&(usuario.senha==this.formGroup.get('pass').value)){
-              this.router.navigate(['/']);
+          if((usuario.email === this.formGroup.get('user').value)
+            &&(usuario.senha === this.formGroup.get('pass').value)){
+              this.router.navigate(['/home'], { queryParams: { id: usuario.id }});
           } else{
             this.showLoginError = true;
           }
