@@ -23,7 +23,7 @@ body {
 }
 
 .page {
-  margin-left: 300px;
+  margin-left: 200px;
 }
 
 .style-default {
@@ -47,7 +47,7 @@ body {
 
 .layout-header-container {
   z-index: 2;
-  width: calc(100% - 300px);
+  width: calc(100% - 200px);
   height: 80px;
   padding-left: 32px;
   position: fixed;
@@ -63,7 +63,7 @@ body {
   font-size: 18px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   margin-right: 72px;
 }
 
@@ -81,6 +81,7 @@ body {
 .layout-header-content i{
   color: var(--primary);
   font-size: 22px;
+  margin-right: 16px;
 }
 
 .animeleft {
