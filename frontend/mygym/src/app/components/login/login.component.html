@@ -5,19 +5,23 @@
         <form [formGroup]="formGroup">
 
           <label class="form-label">Usuário:</label>
-          <input type="text" formControlName="user" placeholder="Seu nome de usuario"
-            tabindex="1" autofocus="autofocus" />
           <div [ngClass]="setClassError('user')">
             {{ getErrorMessage('user') }}
           </div>
+          <input type="text" formControlName="user" placeholder="Seu nome de usuario"
+            tabindex="1" autofocus="autofocus" />
 
 
           <label class="form-label">Senha:</label>
-          <input type="password" formControlName="pass" value="" placeholder="Sua senha"/>
           <div [ngClass]="setClassError('pass')">
             {{ getErrorMessage('pass') }}
           </div>
+          <input type="password" formControlName="pass" value="" placeholder="Sua senha"/>
 
+
+          <div *ngIf="showLoginError" class="error-message">
+            {{ msgErro }}
+          </div>
           <div>
             <button name="submit" type="submit" id="submit" (click)="login()">LOG IN</button>
           </div>

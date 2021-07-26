@@ -77,10 +77,10 @@ input:required, textarea:required{
    -o-box-shadow: none;
 }
 
-error-message {
+.error-message {
   font-size: 13px;
   margin-bottom: 16px;
-  color: var(--danger);
+  color: red;
 }
 
 /* Make form look nice on smaller screens */
