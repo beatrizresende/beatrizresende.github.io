@@ -1,22 +1,24 @@
+h2{
+  margin: 5% 0% 2% 0%;
+  font-size: 2rem;
+  text-align: center;
+}
+
 .sobre-container{
-    padding: 20px 40px;
-    color: white;
+    color: var(--text);
     background: var(--secundary);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
 }
+
 .sobre{
-
-    width: 50%;
-    display:inline-block;
-
+     margin: 5% 5% 2% 5%;
+    text-align: center;
 }
-.imagemLocal{
 
-    width: 80%;
-    display: inline-block;
-
-}
 #local{
-
-    width: 30%;
-    
+    width: 50%;
 }

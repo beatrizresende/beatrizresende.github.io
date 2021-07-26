@@ -1,3 +1,7 @@
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { UsuarioService } from './../../services/usuario.service';
+import { IUsuario } from './../../models/IUsuario';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Texts } from 'src/app/models/Texts';
@@ -7,14 +11,21 @@ import { Texts } from 'src/app/models/Texts';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
 
   public formGroup: FormGroup;
   public isSubmitted: boolean = false;
   public errMessages = Texts;
+  public usuarios: IUsuario[];
+  public showLoginError: boolean = false;
+  public msgErro: String = "Login e/ou Senha incorretos.";
+
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private usuarioService: UsuarioService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -30,12 +41,22 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.isSubmitted = true;
+    this.showLoginError = false;
+
     if (this.formGroup.valid){
 
-      this.formGroup.get('user').value;
-
+      this.usuarioService.getUsers().subscribe(res=> {
+        console.log(res);
+        res.find(usuario=> {
+          if((usuario.email==this.formGroup.get('user').value)
+            &&(usuario.senha==this.formGroup.get('pass').value)){
+              this.router.navigate(['/']);
+          } else{
+            this.showLoginError = true;
+          }
+        })
+      });
     }
-    console.log(this.formGroup.value);
   }
 
   formControls(value) {
