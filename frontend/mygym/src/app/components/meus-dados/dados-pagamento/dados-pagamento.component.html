@@ -8,46 +8,12 @@
     </div>
   </div>
   <div class="collapse-dados-container-content" *ngIf="isOpen">
-    <div class="card">
-      <div class="card-content">
-        <div class="card-icon">
-          <img src="../../../../assets/master.png" alt="badeira cartão de crédito">
-          <div class="chip">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-              <path fill="#f9e65c"
-                d="M15,41.5V28c0-3.866,3.134-7,7-7h56c3.866,0,7,3.134,7,7v44c0,3.866-3.134,7-7,7H22 c-3.866,0-7-3.134-7-7V41.5z">
-              </path>
-              <path fill="#fef6aa"
-                d="M84.5 61.5h-20c-1.562-1.562-2.438-2.438-4-4v-15c1.562-1.562 2.438-2.438 4-4h20V61.5zM15.5 61.5h20c1.562-1.562 2.438-2.438 4-4v-15c-1.562-1.562-2.438-2.438-4-4h-20V61.5z">
-              </path>
-              <path fill="#1f212b"
-                d="M78,80H22c-4.411,0-8-3.589-8-8V28c0-4.411,3.589-8,8-8h56c4.411,0,8,3.589,8,8v44 C86,76.411,82.411,80,78,80z M22,22c-3.309,0-6,2.691-6,6v44c0,3.309,2.691,6,6,6h56c3.309,0,6-2.691,6-6V28c0-3.309-2.691-6-6-6 H22z">
-              </path>
-              <path fill="#1f212b"
-                d="M35.5 62h-20c-.276 0-.5-.224-.5-.5v-23c0-.276.224-.5.5-.5h20c.133 0 .26.053.354.146l4 4C39.947 42.24 40 42.367 40 42.5v15c0 .133-.053.26-.146.354l-4 4C35.76 61.947 35.633 62 35.5 62zM16 61h19.293L39 57.293V42.707L35.293 39H16V61zM68.5 29h-49c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h49c.276 0 .5.224.5.5S68.776 29 68.5 29zM75.5 29h-4c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h4c.276 0 .5.224.5.5S75.776 29 75.5 29zM80.5 29h-2c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h2c.276 0 .5.224.5.5S80.776 29 80.5 29zM38.888 78.816l-.775-.632L49 64.822V57.5h1V65c0 .115-.04.227-.112.316L38.888 78.816zM60.5 79c-.145 0-.289-.063-.388-.184l-8.148-10c-.175-.214-.143-.529.072-.704.213-.174.529-.143.703.072l8.148 10c.175.214.143.529-.072.704C60.723 78.963 60.611 79 60.5 79zM84.5 62h-20c-.133 0-.26-.053-.354-.146l-4-4C60.053 57.76 60 57.633 60 57.5v-15c0-.133.053-.26.146-.354l4-4C64.24 38.053 64.367 38 64.5 38h20c.276 0 .5.224.5.5v23C85 61.776 84.776 62 84.5 62zM64.707 61H84V39H64.707L61 42.707v14.586L64.707 61z">
-              </path>
-              <path fill="#1f212b"
-                d="M39 57H60.5V58H39zM60.5 43H47c-.276 0-.5-.224-.5-.5S46.724 42 47 42h13.5c.276 0 .5.224.5.5S60.776 43 60.5 43z">
-              </path>
-            </svg>
-          </div>
-        </div>
-        <div class="card-info">
-          <div class="card-info-content">
-            <div class="card-number">
-              <span>xxx xxxx xxxx</span>
-              <span>
-                0000
-              </span>
-            </div>
-            <span class="card-name">Fulana de Tal</span>
-            <div class="expiration-date-cvc-container">
-              <span class="card-expiration-date">Validade: 02/27</span>
-              <span class="card-cvc">123</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <app-credit-card
+      [numeroCartao]="numeroCartao"
+      [titular]="titular"
+      [validade]="validade"
+      [cvc]="cvc"
+      [cadastro]="cadastro"
+    ></app-credit-card>
   </div>
 </div>

@@ -6,4 +6,8 @@ export interface IUsuario {
  email: string;
  telefone: string;
  senha: string;
+ numeroCartao: string;
+ titular: string;
+ validade: string;
+ cvc: string;
 }

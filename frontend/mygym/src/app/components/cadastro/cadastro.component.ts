@@ -15,6 +15,8 @@ export class CadastroComponent implements OnInit {
   public step: number = 1;
   public textsCustom = Texts;
   public isSubmitted: boolean = false;
+  public regexBandeiras: any;  
+  public cadastro: boolean = true;  
 
   constructor(
     private router: Router,
@@ -34,19 +36,52 @@ export class CadastroComponent implements OnInit {
       email: ['', Validators.compose([Validators.required, Validators.email])],
       telefone: ['', Validators.compose([Validators.required, this.validatePhoneNumber])],
       senha: ['', Validators.compose([Validators.required, this.validatePassword])],
+      
+      numeroCartao: ['', [Validators.required]],
+      titular: ['', [Validators.required]],
+      validade: ['', Validators.compose([Validators.required, this.validateExpDate])],
+      cvc: ['', [Validators.required]],
     })
   } 
 
-  setStep() {
-    this.isSubmitted = true;    
+  // setStep() {
+  //   this.isSubmitted = true;    
 
+  //   if(
+  //     !this.formControls('nome').errors && 
+  //     !this.formControls('cpf').errors && 
+  //     !this.formControls('dataNascimento').errors) {
+      
+  //     this.isSubmitted = false; 
+  //     this.step === 2 ? this.step-- : this.step++;
+  //   }
+  // }
+
+  backStep() {
+    this.step--;
+  }
+
+  nextStep() {
+    this.isSubmitted = true; 
+    
     if(
+      this.step === 1 && 
       !this.formControls('nome').errors && 
       !this.formControls('cpf').errors && 
       !this.formControls('dataNascimento').errors) {
       
-      this.isSubmitted = false; 
-      this.step === 2 ? this.step-- : this.step++;
+      this.step++;
+      this.isSubmitted = false;
+    }
+    
+    if(
+      this.step === 2 && 
+      !this.formControls('email').errors && 
+      !this.formControls('telefone').errors && 
+      !this.formControls('senha').errors) {
+        
+      this.step++;
+      this.isSubmitted = false;
     }
   }
 
@@ -112,7 +147,18 @@ export class CadastroComponent implements OnInit {
     return null;    
   }
 
+  validateExpDate(control: AbstractControl) : ValidationErrors | null {    
+    const date = moment(control.value, 'MM/YYYY');
+    const today = moment(new Date(), 'MM/YYYY');
+
+    if(!date.isValid() || date.isBefore(today)) {
+      return { validateExpDate: true };
+    }
+    return null;    
+  }
+
   somenteNumeros(event) {
     return (event.charCode >= 48 && event.charCode <= 57);
   }
+  
 }

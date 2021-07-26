@@ -14,14 +14,27 @@
 }
 
 .form-step-01,
-.form-step-02 {
+.form-step-02,
+.form-step-03 {  
   padding: 2rem;
 }
 
+.credit-card { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Consolas";
+  text-transform: uppercase;
+ }
+
+ .validate-cvc {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 8px;
+ }
+
 .form-group-container {
- /* width: 300px; */
  display: flex;
- /* margin: 0 auto 16px auto; */
  flex-direction: column;
  box-sizing: border-box;
 }
@@ -52,7 +65,7 @@
 
 .form-group-error-message {
   font-size: 13px;
-  margin-bottom: 16px;
+  margin: 0px 0px 8px 4px;
   color: var(--danger);
 }
 
@@ -71,16 +84,11 @@
 .button-container {
  display: flex;
  justify-content: center;
+ margin-right: 24px;
 }
 
 .back-butom {
-  position: relative;
-}
-
-.back-butom i {
-  position: absolute;
-  right: 24px;
-  top: -16px;
+  margin-right: 16px;
 }
 
 .button-container-content {

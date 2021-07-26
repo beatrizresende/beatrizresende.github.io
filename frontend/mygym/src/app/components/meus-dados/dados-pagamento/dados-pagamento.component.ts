@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DadosPagamentoComponent implements OnInit {
   public isOpen: boolean = true;
+  public numeroCartao: string = '555 5555 5555 5555';
+  public titular: string = 'Fulana de tal';
+  public validade: string = '02/2027';
+  public cvc: string = '123';
+  public cadastro
 
   constructor() { }
 
