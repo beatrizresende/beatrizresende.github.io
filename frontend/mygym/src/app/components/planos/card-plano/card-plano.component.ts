@@ -9,7 +9,7 @@ import { PlanoService } from '../../../services/plano.service'
 })
 export class CardPlanoComponent implements OnInit {
 
-  public planos: Plano[];
+  public planos: any;
   public firstSlide: number = 0;
   public secondSlide: number = 1;
   public thirdSlide: number = 2;
@@ -19,7 +19,13 @@ export class CardPlanoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.planos = this.planoService.planos;
+    this.getPlanos();
+  }
+
+  getPlanos() {
+    this.planoService.getPlanos().subscribe(response => {
+      this.planos = response;
+    })
   }
 
   onClickPrevious() {

@@ -9,6 +9,7 @@ export const environment = {
     endpoints: {
       methods: {
         usuarios: '/usuarios',
+        planos: '/planos'
       }
     }
   }

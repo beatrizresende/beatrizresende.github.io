@@ -102,18 +102,18 @@ h6 {
 .ver-mais:hover {
     cursor: pointer;
     text-shadow: 
-    0 0 21px var(--primary) 
-    0 0 42px var(--primary) 
-    0 0 82px var(--primary) 
-    0 0 92px var(--primary) 
-    0 0 150px var(--primary) 
-    0 0 200px var(--primary) 
+    0 0 21px var(--primary),
+    0 0 42px var(--primary),
+    0 0 82px var(--primary),
+    0 0 92px var(--primary),
+    0 0 150px var(--primary), 
+    0 0 200px var(--primary);
 }
 .comprar:hover {
     cursor: pointer;
     box-shadow: 
-    0 0 5px var(--primary) 
-    0 0 10px var(--primary) 
+    0 0 5px var(--primary),
+    0 0 10px var(--primary),
     0 0 15px var(--primary);
 }
 .arrow {

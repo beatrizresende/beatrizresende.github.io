@@ -1,4 +1,7 @@
+import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Plano } from '../models/plano.model';
 
 @Injectable({
@@ -6,51 +9,20 @@ import { Plano } from '../models/plano.model';
 })
 export class PlanoService {
 
-  constructor() { }
+  private host = environment.api.host;
+  private methods = environment.api.endpoints.methods.planos;
+  private url = this.host + this.methods;
 
-  planos: Plano[] = [
-    {
-      imgPath: '../../../../assets/imgs/SARADA-EM-3-MESES.jfif',
-      titulo: 'SARADA EM 3 MESES',
-    preco: 40,
-    descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    id: 1
-    },
-    {
-      imgPath: '../../../../assets/imgs/SAUDÁVEL-&-EQUILIBRADA.jfif',
-      titulo: 'SAUDÁVEL & EQUILIBRADA',
-    preco: 20,
-    descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    id: 2
-    },
-    {
-      imgPath: '../../../../assets/imgs/SAÚDE-MENTAL-EM-1º-LUGAR.jfif',
-      titulo: 'SAÚDE MENTAL EM 1º LUGAR',
-    preco: 20,
-    descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    id: 3
-    },
-    {
-      imgPath: '../../../../assets/imgs/SUPERE-SEUS-DESAFIOS.jfif',
-      titulo: 'SUPERE SEUS DESAFIOS',
-    preco: 25,
-    descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    id: 4
-    },
-    {
-      imgPath: '../../../../assets/imgs/ZEN-&-BEM.jfif',
-      titulo: 'ZEN & BEM',
-    preco: 45,
-    descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    id: 5
-    },
-    {
-      imgPath: '../../../../assets/imgs/NOVAS-BUDAS.jfif',
-      titulo: 'NOVAS-BUDAS',
-    preco: 35,
-    descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    id: 6
-    }
-  ];
+  private getHeader() {
+    return new HttpHeaders({
+      'Content-Type': 'application/json; charset=UTF-8',
+    });
+  }
+
+  constructor(private http: HttpClient) { }
+
+  getPlanos(): Observable<Plano[]> {    
+    return this.http.get<Plano[]>(this.url);
+  }
   
 }

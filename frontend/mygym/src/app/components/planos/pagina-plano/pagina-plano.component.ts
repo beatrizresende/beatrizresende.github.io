@@ -9,7 +9,7 @@ import { PlanoService } from 'src/app/services/plano.service';
   styleUrls: ['./pagina-plano.component.css']
 })
 export class PaginaPlanoComponent implements OnInit {
-  public planos: Plano[];
+  public planos: any;
   public plano: Plano;
   public planoId: number;
 
@@ -19,7 +19,7 @@ export class PaginaPlanoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.planos = this.planoService.planos;
+    this.planos = this.planoService.getPlanos();
     this.route.params.subscribe((params: Params) => {
       this.planoId = params.id;
     });
