@@ -12,6 +12,7 @@ import { IndexComponent } from './components/index/index.component';
 import { SobreComponent } from './components/sobre/sobre.component';
 import { PaginaPlanoComponent } from './components/planos/pagina-plano/pagina-plano.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {
@@ -71,6 +72,16 @@ const routes: Routes = [
       {
         path: '',
         component: MeusDadosComponent,
+      }
+    ],
+  },
+  {
+    path: 'home',
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        component: HomeComponent,
       }
     ],
   },

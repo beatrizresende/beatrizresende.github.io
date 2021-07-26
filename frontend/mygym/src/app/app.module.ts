@@ -28,6 +28,7 @@ import { CadastroComponent } from './components/cadastro/cadastro.component';
 
 import { BrMaskerModule } from 'br-mask';
 import { ContatoComponent } from './components/contato/contato.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ContatoComponent } from './components/contato/contato.component';
     SobreComponent,
     CardPlanoComponent,
     BtnVoltarComponent,
-    CadastroComponent
+    CadastroComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

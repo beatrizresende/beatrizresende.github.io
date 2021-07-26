@@ -1,0 +1,26 @@
+.home-container {
+ padding-top: 80px;
+}
+
+.home-container-content {
+ width: 1200px;
+ padding: 70px 100px;  
+ display: flex;
+}
+
+.home-container-content img {
+  width: 300px;
+}
+
+.text-message {
+ padding: 0px 40px;
+ background: var(--text);
+}
+
+.text-message p {
+ margin: 32px;
+}
+ 
+.text-message p:first-child {
+ font-size: 48px;
+}
