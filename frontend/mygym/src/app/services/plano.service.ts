@@ -13,12 +13,6 @@ export class PlanoService {
   private methods = environment.api.endpoints.methods.planos;
   private url = this.host + this.methods;
 
-  private getHeader() {
-    return new HttpHeaders({
-      'Content-Type': 'application/json; charset=UTF-8',
-    });
-  }
-
   constructor(private http: HttpClient) { }
 
   getPlanos(): Observable<Plano[]> {    
