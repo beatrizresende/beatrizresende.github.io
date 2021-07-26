@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from './../../environments/environment';
 import { Observable } from 'rxjs';
+import { retry } from 'rxjs/operators';
 
 import { IUsuario } from './../models/IUsuario';
 
@@ -31,7 +32,8 @@ export class UsuarioService {
   }
 
   saveUser(user: IUsuario): Observable<IUsuario> {    
-    return this.http.post<IUsuario>(this.url, JSON.stringify(user), { headers: this.getHeader() });
+    return this.http.post<IUsuario>(this.url, JSON.stringify(user), { headers: this.getHeader() })
+    .pipe(retry(1));
   }
 
   updateUser(user: IUsuario): Observable<IUsuario> {    

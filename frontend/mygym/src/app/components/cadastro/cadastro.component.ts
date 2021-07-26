@@ -35,27 +35,13 @@ export class CadastroComponent implements OnInit {
       dataNascimento: ['', Validators.compose([Validators.required, this.validateBday])],
       email: ['', Validators.compose([Validators.required, Validators.email])],
       telefone: ['', Validators.compose([Validators.required, this.validatePhoneNumber])],
-      senha: ['', Validators.compose([Validators.required, this.validatePassword])],
-      
+      senha: ['', Validators.compose([Validators.required, this.validatePassword])],      
       numeroCartao: ['', [Validators.required]],
       titular: ['', [Validators.required]],
       validade: ['', Validators.compose([Validators.required, this.validateExpDate])],
       cvc: ['', [Validators.required]],
     })
   } 
-
-  // setStep() {
-  //   this.isSubmitted = true;    
-
-  //   if(
-  //     !this.formControls('nome').errors && 
-  //     !this.formControls('cpf').errors && 
-  //     !this.formControls('dataNascimento').errors) {
-      
-  //     this.isSubmitted = false; 
-  //     this.step === 2 ? this.step-- : this.step++;
-  //   }
-  // }
 
   backStep() {
     this.step--;
@@ -90,10 +76,10 @@ export class CadastroComponent implements OnInit {
 
     if(this.form.valid) {
       this.usuarioService.saveUser(this.form.value).subscribe(response => {
-        this.router.navigate(['/login']);
-      });      
+        this.router.navigate(['/success']);
+      });
     }
-  }
+  }  
 
   formControls(value) {
     return this.form.get(value);
@@ -148,8 +134,8 @@ export class CadastroComponent implements OnInit {
   }
 
   validateExpDate(control: AbstractControl) : ValidationErrors | null {    
-    const date = moment(control.value, 'MM/YYYY');
-    const today = moment(new Date(), 'MM/YYYY');
+    const date = moment(control.value, 'MM/YY');
+    const today = moment(new Date(), 'MM/YY');
 
     if(!date.isValid() || date.isBefore(today)) {
       return { validateExpDate: true };

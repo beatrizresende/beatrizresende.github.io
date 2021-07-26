@@ -1,3 +1,4 @@
+import { PageSuccessComponent } from './components/page-success/page-success.component';
 import { ContatoComponent } from './components/contato/contato.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -42,6 +43,16 @@ const routes: Routes = [
       {
         path: '',
         component: CadastroComponent,
+      }
+    ]
+  },
+  {
+    path: 'success',
+    component: DefaultLayoutComponent,
+    children: [
+      {
+        path: '',
+        component: PageSuccessComponent,
       }
     ]
   },
