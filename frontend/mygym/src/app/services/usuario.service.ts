@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpHeaders, HttpClient, HttpParams } from '@angular/common/http';
+import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { environment } from './../../environments/environment';
 import { Observable } from 'rxjs';
-import { retry } from 'rxjs/operators';
 
+import SimpleCrypto from "simple-crypto-js"
 import { IUsuario } from './../models/IUsuario';
 
 @Injectable({
@@ -20,27 +20,48 @@ export class UsuarioService {
       'Content-Type': 'application/json; charset=UTF-8',
     });
   }
-
+  
   constructor(private http: HttpClient) { }
+
+  encryptValue(value) {
+    let simpleCrypto = new SimpleCrypto("%Rq|]FWd>:bnUo%{r)6pI8!xW34SI)8;BQ;>WLZSJ07fGmXyX]Eg3%");
+    return simpleCrypto.encrypt(value);
+  }
+  
+  decryptValue(value) {
+    let simpleCrypto = new SimpleCrypto("%Rq|]FWd>:bnUo%{r)6pI8!xW34SI)8;BQ;>WLZSJ07fGmXyX]Eg3%");
+    return simpleCrypto.decrypt(value)
+  }  
+
+  getToken() {
+    return sessionStorage.getItem('token'); 
+  }
 
   getUsers(): Observable<IUsuario[]> {    
     return this.http.get<IUsuario[]>(this.url);
   }
 
-  getUserById(id: number): Observable<IUsuario> {
-    return this.http.get<IUsuario>(`${this.url}/${id}`);
+  getUserById(id: string): Observable<IUsuario> {
+    if(!this.getToken()) return;    
+
+    return this.http.get<IUsuario>(`${this.url}/${this.decryptValue(id)}`);
   }
 
   saveUser(user: IUsuario): Observable<IUsuario> {    
+    if(!this.getToken()) return;
+
     return this.http.post<IUsuario>(this.url, JSON.stringify(user), { headers: this.getHeader() })
-    .pipe(retry(1));
   }
 
   updateUser(user: IUsuario): Observable<IUsuario> {    
+    if(!this.getToken()) return;
+
     return this.http.put<IUsuario>(`${this.url}/${user.id}`, JSON.stringify(user), { headers: this.getHeader() });
   }
 
   deleteUser(user: IUsuario) {    
+    if(!this.getToken()) return;
+
     return this.http.delete<IUsuario>(`${this.url}/${user.id}`, { headers: this.getHeader() })
   }
 }

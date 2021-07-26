@@ -70,6 +70,7 @@
               class="form-group-input" 
               formControlName="telefone"
               [brmasker]="{phone: true}"
+              minlength="14"
             >
             <div [ngClass]="setClassError('telefone')">
               {{ getErrorMessage('telefone') }}
