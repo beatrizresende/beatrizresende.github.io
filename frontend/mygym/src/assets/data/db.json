@@ -4,7 +4,7 @@
       "nome": "teste",
       "cpf": "222.222.222-22",
       "dataNascimento": "01/01/2000",
-      "email": "teste@teste.com",
+      "email": "t@t.com",
       "telefone": "(22) 2222-2222",
       "senha": "123456",
       "id": 1
@@ -69,6 +69,32 @@
       "validade": "02/27",
       "cvc": "123",
       "id": 6
+    },
+    {
+      "nome": "aquiles",
+      "cpf": "222.222.222-22",
+      "dataNascimento": "20/10/1987",
+      "email": "asantos@marlin.com.br",
+      "telefone": "(21) 99160-9262",
+      "senha": "123456",
+      "numeroCartao": "5555 5555 5555 5555",
+      "titular": "Aquiles Santos",
+      "validade": "02/27",
+      "cvc": "123",
+      "id": 7
+    },
+    {
+      "nome": "teste",
+      "cpf": "222.222.222-22",
+      "dataNascimento": "10/10/2000",
+      "email": "teste@teste.com",
+      "telefone": "(22) 2222-2222",
+      "senha": "123456",
+      "numeroCartao": "5555 5555 5555 5555",
+      "titular": "teste teste",
+      "validade": "02/27",
+      "cvc": "123",
+      "id": 8
     }
   ],
   "planos": [

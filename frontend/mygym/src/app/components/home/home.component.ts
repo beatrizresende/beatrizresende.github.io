@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {    
     this.activatedRoute.queryParams.subscribe(params => {
-      // this.checkParams(params);
+      this.checkParams(params);
     });
   }
 
