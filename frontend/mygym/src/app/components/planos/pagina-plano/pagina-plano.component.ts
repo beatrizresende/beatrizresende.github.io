@@ -19,10 +19,16 @@ export class PaginaPlanoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.planos = this.planoService.getPlanos();
-    this.route.params.subscribe((params: Params) => {
-      this.planoId = params.id;
+    this.getPlano();
+  }
+
+  getPlano() {
+    this.planoService.getPlanos().subscribe(response => {
+      this.planos = response;
+      this.route.params.subscribe((params: Params) => {
+        this.planoId = params.id;
+        this.plano = this.planos[this.planoId-1];
+      });
     });
-    this.plano = this.planos[this.planoId-1];
   }
 }
