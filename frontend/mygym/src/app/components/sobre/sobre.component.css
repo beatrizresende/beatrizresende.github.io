@@ -43,7 +43,7 @@ footer {
   .text-center {
 
     text-align: center;
-    color: pink;
+    color: var (--primary);
     
   }
   .primary--text {
