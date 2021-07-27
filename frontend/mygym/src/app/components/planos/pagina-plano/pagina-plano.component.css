@@ -1,7 +1,7 @@
 .plano-container {
  color: var(--text);
  background: var(--secundary);
- margin: 40px 200px 0px 200px;
+ padding: 40px 200px 0px 200px;
 }
 .titulo {
      color: white;
