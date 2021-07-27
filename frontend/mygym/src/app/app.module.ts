@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';  
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -14,10 +16,21 @@ import { DadosPessoaisComponent } from './components/meus-dados/dados-pessoais/d
 import { DadosContatoComponent } from './components/meus-dados/dados-contato/dados-contato.component';
 import { DadosPagamentoComponent } from './components/meus-dados/dados-pagamento/dados-pagamento.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { PlanoService } from './services/plano.service';
+import { PaginaPlanoComponent } from './components/planos/pagina-plano/pagina-plano.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { IndexComponent } from './components/index/index.component';
 import { SobreComponent } from './components/sobre/sobre.component';
+import { CardPlanoComponent } from './components/planos/card-plano/card-plano.component';
+import { BtnVoltarComponent } from './components/btn-voltar/btn-voltar.component';
+import { CadastroComponent } from './components/cadastro/cadastro.component';
+
+import { BrMaskerModule } from 'br-mask';
+import { ContatoComponent } from './components/contato/contato.component';
+import { HomeComponent } from './components/home/home.component';
+import { CreditCardComponent } from './components/credit-card/credit-card.component';
+import { PageSuccessComponent } from './components/page-success/page-success.component';
 
 @NgModule({
   declarations: [
@@ -29,17 +42,28 @@ import { SobreComponent } from './components/sobre/sobre.component';
     SideBarComponent,
     DefaultLayoutComponent,
     LayoutComponent,
+    PaginaPlanoComponent,
     LoginComponent,
     NavBarComponent,
     IndexComponent,
-    SobreComponent
+    SobreComponent,
+    CardPlanoComponent,
+    BtnVoltarComponent,
+    CadastroComponent,
+    HomeComponent,
+    CreditCardComponent,
+    PageSuccessComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
+    BrMaskerModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PlanoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

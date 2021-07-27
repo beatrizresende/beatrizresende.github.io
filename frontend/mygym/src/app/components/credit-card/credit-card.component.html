@@ -1,0 +1,30 @@
+<div class="card">
+ <div class="card-content">
+   <div class="card-icon">
+     <div class="icon-brand">
+       <img src="../../../../assets/master.png" alt="badeira cartão de crédito">
+     </div>
+     <div class="chip">
+       <img src="https://img.icons8.com/plasticine/452/sim-card-chip.png" alt="">
+     </div>
+   </div>
+   <div class="card-info">
+     <div class="card-info-content">
+       <div class="card-number">
+        <ng-container *ngIf="!cadastro">
+          <span>xxx xxxx xxxx</span>
+           <span>
+             {{ numeroCartao.slice(-4) }}
+           </span>
+        </ng-container> 
+         <span *ngIf="cadastro">{{ numeroCartao }}</span>
+       </div>
+       <span class="card-name">{{ titular }}</span>
+       <div class="expiration-date-cvc-container">
+         <span class="card-expiration-date">{{ validade }}</span>
+         <span class="card-cvc">{{ cvc }}</span>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>

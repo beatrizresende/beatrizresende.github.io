@@ -1,0 +1,80 @@
+<div class="style-default">
+    <div class="card-plano-container animedown">        
+        <div class="carousel">
+            <div class="prev-arrow">
+                <button (click)="onClickPrevious()">
+                    <p class="arrow left"></p>
+                </button>
+            </div>
+        <!--primeiro plano-->
+        <div *ngFor="let plano of planos; let i = index" class="first-slide">
+        <a routerLink="/planos/{{ plano.id }}">
+            <div *ngIf="i === firstSlide" class="card">
+                <div class="card-img">
+            <img class="card-img-fit" src="{{ plano.imgPath }}">
+        </div>
+        <div class="card-body">
+            <h2 class="plano-titulo">{{ plano.titulo }}</h2>
+            <div class="preco">
+            <h4>R${{ plano.preco }}</h4>
+            <h6>/mês</h6>
+        </div>
+        <div class="botoes">
+            <a routerLink="/planos/{{ plano.id }}" class="ver-mais">VER MAIS</a><button class="comprar">COMPRAR</button>
+        </div>
+        </div>
+        </div>
+        </a>
+        </div>
+        
+        <!--segundo plano-->
+        <div *ngFor="let plano of planos; let i = index" class="second-slide">
+        <a routerLink="/planos/{{ plano.id }}">
+            <div *ngIf="i === secondSlide" class="card">
+                <div class="card-img">
+            <img class="card-img-fit" src="{{ plano.imgPath }}">
+        </div>
+        <div class="card-body">
+            <h2 class="plano-titulo">{{ plano.titulo }}</h2>
+            <div class="preco">
+            <h4>R${{ plano.preco }}</h4>
+            <h6>/mês</h6>
+        </div>
+        <div class="botoes">
+            <a routerLink="/planos/{{ plano.id }}" class="ver-mais">VER MAIS</a><button class="comprar">COMPRAR</button>
+        </div>
+        </div>
+        </div>
+        </a>
+        </div>
+        
+        <!--terceiro plano-->
+        <div *ngFor="let plano of planos; let i = index" class="third-slide">
+        <a routerLink="/planos/{{ plano.id }}">
+            <div *ngIf="i === thirdSlide" class="card">
+                <div class="card-img">
+            <img class="card-img-fit" src="{{ plano.imgPath }}">
+        </div>
+        <div class="card-body">
+            <h2 class="plano-titulo">{{ plano.titulo }}</h2>
+            <div class="preco">
+            <h4>R${{ plano.preco }}</h4>
+            <h6>/mês</h6>
+        </div>
+        <div class="botoes">
+            <a routerLink="/planos/{{ plano.id }}" class="ver-mais">VER MAIS</a><button class="comprar">COMPRAR</button>
+        </div>
+        </div>
+        </div>
+        </a>
+        </div>
+        
+        <div class="next-arrow">
+            <button (click)="onClickNext()">
+                <!-- <img src="../../../../assets/imgs/arrow-circle.png"> -->
+                <p class="arrow right"></p>
+            </button>
+        </div>
+        </div>
+    </div>
+</div>
