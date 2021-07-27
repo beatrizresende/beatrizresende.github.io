@@ -2,8 +2,8 @@
     <div class="card-plano-container animedown">        
         <div class="carousel">
             <div class="prev-arrow">
-                <button (click)="onClickPrevious()">
-                    <p class="arrow left"></p>
+                <button class="arrow" (click)="onClickPrevious()">
+                    <i class="fas fa-chevron-circle-left"></i>
                 </button>
             </div>
         <!--primeiro plano-->
@@ -20,7 +20,7 @@
             <h6>/mês</h6>
         </div>
         <div class="botoes">
-            <a routerLink="/planos/{{ plano.id }}" class="ver-mais">VER MAIS</a><button class="comprar">COMPRAR</button>
+            <a routerLink="/planos/{{ plano.id }}" class="ver-mais">VER MAIS</a><button class="comprar" (click)="comprarPlano()">COMPRAR</button>
         </div>
         </div>
         </div>
@@ -41,7 +41,7 @@
             <h6>/mês</h6>
         </div>
         <div class="botoes">
-            <a routerLink="/planos/{{ plano.id }}" class="ver-mais">VER MAIS</a><button class="comprar">COMPRAR</button>
+            <a routerLink="/planos/{{ plano.id }}" class="ver-mais">VER MAIS</a><button class="comprar" (click)="comprarPlano()">COMPRAR</button>
         </div>
         </div>
         </div>
@@ -62,7 +62,7 @@
             <h6>/mês</h6>
         </div>
         <div class="botoes">
-            <a routerLink="/planos/{{ plano.id }}" class="ver-mais">VER MAIS</a><button class="comprar">COMPRAR</button>
+            <a routerLink="/planos/{{ plano.id }}" class="ver-mais">VER MAIS</a><button class="comprar" (click)="comprarPlano()">COMPRAR</button>
         </div>
         </div>
         </div>
@@ -70,9 +70,8 @@
         </div>
         
         <div class="next-arrow">
-            <button (click)="onClickNext()">
-                <!-- <img src="../../../../assets/imgs/arrow-circle.png"> -->
-                <p class="arrow right"></p>
+            <button class="arrow" (click)="onClickNext()">
+                <i class="fas fa-chevron-circle-right"></i>
             </button>
         </div>
         </div>

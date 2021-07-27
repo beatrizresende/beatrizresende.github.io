@@ -28,6 +28,10 @@ export class CardPlanoComponent implements OnInit {
     })
   }
 
+  comprarPlano() {
+    alert('Plano comprado com sucesso!');
+  }
+
   onClickPrevious() {
     const previous = this.firstSlide - 1;
     if (previous < 0){ 

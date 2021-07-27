@@ -21,10 +21,8 @@ import { PlanoService } from './services/plano.service';
 import { PaginaPlanoComponent } from './components/planos/pagina-plano/pagina-plano.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { IndexComponent } from './components/index/index.component';
 import { SobreComponent } from './components/sobre/sobre.component';
 import { CardPlanoComponent } from './components/planos/card-plano/card-plano.component';
-import { BtnVoltarComponent } from './components/btn-voltar/btn-voltar.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 
 import { BrMaskerModule } from 'br-mask';
@@ -46,14 +44,13 @@ import { PageSuccessComponent } from './components/page-success/page-success.com
     PaginaPlanoComponent,
     LoginComponent,
     NavBarComponent,
-    IndexComponent,
     SobreComponent,
     CardPlanoComponent,
-    BtnVoltarComponent,
     CadastroComponent,
     HomeComponent,
     CreditCardComponent,
-    PageSuccessComponent
+    PageSuccessComponent,
+    ContatoComponent
   ],
   imports: [
     BrowserModule,
