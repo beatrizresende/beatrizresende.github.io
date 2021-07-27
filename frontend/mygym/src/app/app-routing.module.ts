@@ -14,6 +14,7 @@ import { SobreComponent } from './components/sobre/sobre.component';
 import { PaginaPlanoComponent } from './components/planos/pagina-plano/pagina-plano.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { HomeComponent } from './components/home/home.component';
+import { AuthGuardService } from './guards/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -24,7 +25,7 @@ const routes: Routes = [
         path: '',
         component: IndexComponent,
       }
-    ]
+    ],
   },
   {
     path: 'login',
@@ -35,7 +36,7 @@ const routes: Routes = [
         component: LoginComponent,
       },
       { path: '', redirectTo: 'login', pathMatch: 'full' }      
-    ]
+    ],
   },
   {
     path: 'cadastro',
@@ -45,7 +46,7 @@ const routes: Routes = [
         path: '',
         component: CadastroComponent,
       }
-    ]
+    ],
   },
   {
     path: 'success',
@@ -55,7 +56,7 @@ const routes: Routes = [
         path: '',
         component: PageSuccessComponent,
       }
-    ]
+    ],
   },
   {
     path: 'sobre',
@@ -65,7 +66,7 @@ const routes: Routes = [
         path: '',
         component: SobreComponent,
       }
-    ]
+    ],
   },
   {
     path: 'contato',
@@ -75,7 +76,7 @@ const routes: Routes = [
         path: '',
         component: ContatoComponent,
       }
-    ]
+    ],
   },
   {
     path: 'meus-dados',
@@ -86,6 +87,7 @@ const routes: Routes = [
         component: MeusDadosComponent,
       }
     ],
+    canActivate: [AuthGuardService],
   },
   {
     path: 'home',
@@ -96,6 +98,7 @@ const routes: Routes = [
         component: HomeComponent,
       }
     ],
+    canActivate: [AuthGuardService],
   },
   { 
     path: 'planos',
@@ -109,7 +112,7 @@ const routes: Routes = [
         path: ':id',
         component: PaginaPlanoComponent 
       }
-    ]
+    ],
   },
   { path: '**', redirectTo: 'login' }
 ]

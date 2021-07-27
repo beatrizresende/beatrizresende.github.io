@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { environment } from './../../environments/environment';
@@ -21,7 +22,7 @@ export class UsuarioService {
     });
   }
   
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   encryptValue(value) {
     let simpleCrypto = new SimpleCrypto("%Rq|]FWd>:bnUo%{r)6pI8!xW34SI)8;BQ;>WLZSJ07fGmXyX]Eg3%");
@@ -63,5 +64,10 @@ export class UsuarioService {
     if(!this.getToken()) return;
 
     return this.http.delete<IUsuario>(`${this.url}/${user.id}`, { headers: this.getHeader() })
+  }
+
+  logout() {
+    this.router.navigate(['/login']);
+    sessionStorage.clear();
   }
 }

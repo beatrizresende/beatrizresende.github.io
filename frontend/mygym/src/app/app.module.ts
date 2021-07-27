@@ -1,3 +1,4 @@
+import { AuthGuardService } from './guards/auth-guard.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';  
@@ -63,7 +64,7 @@ import { PageSuccessComponent } from './components/page-success/page-success.com
     BrMaskerModule,
     HttpClientModule
   ],
-  providers: [PlanoService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
