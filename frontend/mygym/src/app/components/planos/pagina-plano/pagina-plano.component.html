@@ -1,11 +1,12 @@
 <div *ngIf="isLoaded" class="style-default">
-    <app-btn-voltar></app-btn-voltar>
     <div class="plano-container animedown">
 <h1 class="titulo">{{ plano.titulo }}</h1>
+<div class="preco">
 <h2>R${{ plano.preco }}</h2>
 <h3>/mês</h3>
+</div>
 <h4 class="descricao">{{ plano.descricao }}</h4>
-<img src="{{ plano.imgPath }}">
+<img class="imagem" src="{{ plano.imgPath }}">
 <p class="texto-comprar">Compre este plano aqui!</p>
 <div class="form-comprar">
     <label for="nome-do-plano">Plano desejado</label>
