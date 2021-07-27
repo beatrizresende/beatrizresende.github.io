@@ -21,11 +21,9 @@ export class BtnVoltarComponent implements OnInit {
 ) { }
 
 ngOnInit(): void {
-  console.log('btn-voltar foi iniciado')
 }
 
 onClick() {
-  this.routerLink = this.route.root;
-  console.log(this.routerLink);
+  this.routerLink = "/planos";
 }
 }

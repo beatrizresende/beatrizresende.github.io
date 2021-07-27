@@ -1,19 +1,5 @@
 {
-  "usuarios": [
-    {
-      "nome": "Aquiles",
-      "cpf": "222.222.222-22",
-      "dataNascimento": "01/01/2000",
-      "email": "q@q.com",
-      "telefone": "(22) 2222-2222",
-      "senha": "123456",
-      "numeroCartao": "5555 5555 5555 5555",
-      "titular": "Aquiles Santos",
-      "validade": "02/27",
-      "cvc": "123",
-      "id": 1
-    }
-  ],
+  "usuarios": [],
   "planos": [
     {
       "imgPath": "../../../../assets/imgs/SARADA-EM-3-MESES.jfif",
