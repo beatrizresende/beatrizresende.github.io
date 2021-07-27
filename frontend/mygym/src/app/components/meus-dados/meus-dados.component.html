@@ -1,4 +1,4 @@
-<div class="page">
+<div class="page" *ngIf="user">
   <header class="layout-header-container">
     <div class="bread-crumbs">
       <span>Home</span>
@@ -14,13 +14,13 @@
   <div class="meus-dados-container animeleft">
     <div class="meus-dados-container-content">
       <div>
-        <app-dados-pessoais></app-dados-pessoais>
+        <app-dados-pessoais [user]="user"></app-dados-pessoais>
       </div>
       <div>
-        <app-dados-contato></app-dados-contato>
+        <app-dados-contato [user]="user"></app-dados-contato>
       </div>
       <div>
-        <app-dados-pagamento></app-dados-pagamento>
+        <app-dados-pagamento [user]="user"></app-dados-pagamento>
       </div>    
     </div>
   </div>

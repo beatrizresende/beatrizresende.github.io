@@ -57,10 +57,18 @@
               type="email" 
               class="form-group-input" 
               formControlName="email"
+              (focusout)="verifyEmail(this.form.get('email').value)"
+              (keyup)="usuarioJaCadastrado = false"
             >
             <div [ngClass]="setClassError('email')">
               {{ getErrorMessage('email') }}
             </div>
+            <span 
+              *ngIf="usuarioJaCadastrado"
+              class="form-group-error-message"
+              >
+              Usuário já cadastrado
+            </span>
           </div>
     
           <div class="form-group-container">
@@ -70,6 +78,7 @@
               class="form-group-input" 
               formControlName="telefone"
               [brmasker]="{phone: true}"
+              minlength="14"
             >
             <div [ngClass]="setClassError('telefone')">
               {{ getErrorMessage('telefone') }}

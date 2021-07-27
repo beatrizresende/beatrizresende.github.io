@@ -1,4 +1,4 @@
-<div class="collapse-dados-container">
+<div class="collapse-dados-container" *ngIf="user">
   <div class="collapse-dados-container-header" (click)="isOpen = !isOpen">
     <div class="collapse-dados-container-title">
       Dados de Contato
@@ -11,16 +11,16 @@
     <ul class="lista-dados">
       <li>
         <span>E-mail</span>
-        <span>fulano@gmail.com</span>
+        <span>{{ user.email }}</span>
       </li>
       <li>
         <span>Telefone</span>
-        <span>(00) 0000-0000</span>
+        <span>{{ user.telefone }}</span>
       </li>
-      <li>
+      <!-- <li>
         <span>Whatsapp</span>
         <span>(00) 00000-0000</span>
-      </li>
+      </li> -->
     </ul>
   </div>
 </div>

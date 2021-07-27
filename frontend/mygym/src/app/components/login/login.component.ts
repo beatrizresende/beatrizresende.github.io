@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private usuarioService: UsuarioService,
-    private router: Router
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -49,7 +49,11 @@ export class LoginComponent implements OnInit {
         res.find(usuario=> {
           if((usuario.email === this.formGroup.get('user').value)
             &&(usuario.senha === this.formGroup.get('pass').value)){
-              this.router.navigate(['/home'], { queryParams: { id: usuario.id }});
+              
+              let token = this.usuarioService.encryptValue(usuario.id);
+              sessionStorage.setItem('token', token);
+              this.router.navigate(['/home']);
+
           } else{
             this.showLoginError = true;
           }

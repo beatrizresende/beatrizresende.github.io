@@ -5,6 +5,7 @@ export interface IUsuario {
  dataNascimento: string;
  email: string;
  telefone: string;
+ whatsapp: string;
  senha: string;
  numeroCartao: string;
  titular: string;

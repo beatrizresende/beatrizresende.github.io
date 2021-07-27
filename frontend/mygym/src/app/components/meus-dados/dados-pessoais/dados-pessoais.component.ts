@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { IUsuario } from './../../../models/IUsuario';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dados-pessoais',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DadosPessoaisComponent implements OnInit {
   public isOpen: boolean = true;
+  
+  @Input() user: IUsuario;
 
   constructor() { }
 

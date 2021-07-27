@@ -1,7 +1,7 @@
+import { ActivatedRoute } from '@angular/router';
 import { IUsuario } from './../../models/IUsuario';
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from 'src/app/services/usuario.service';
-import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,26 +10,22 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   public user: IUsuario;
-  public userId: string;
 
   constructor(
-    private router:  Router,
     private usuarioService:  UsuarioService,
-    private activatedRoute:  ActivatedRoute,
-    ) { }
+    private activatedRoute: ActivatedRoute
+    ) { 
+      activatedRoute.params.subscribe(item => {
+        this.getUser();
+      });
+    }
 
-  ngOnInit(): void {    
-    this.activatedRoute.queryParams.subscribe(params => {
-      this.checkParams(params);
-    });
+  ngOnInit(): void {
   }
 
-  checkParams(params) {
-    if(params && params.id) {
-      this.usuarioService.getUserById(params.id).subscribe(response => this.user = response);
-    }
-    else {
-      this.router.navigate(['/login']);
-    }
+  getUser() {
+    const token = this.usuarioService.getToken();
+    this.usuarioService.getUserById(token).subscribe(response => this.user = response );
   }
+
 }
