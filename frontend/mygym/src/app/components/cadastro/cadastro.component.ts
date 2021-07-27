@@ -17,6 +17,7 @@ export class CadastroComponent implements OnInit {
   public isSubmitted: boolean = false;
   public regexBandeiras: any;  
   public cadastro: boolean = true;  
+  public usuarioJaCadastrado: boolean = false;  
 
   constructor(
     private router: Router,
@@ -64,7 +65,8 @@ export class CadastroComponent implements OnInit {
       this.step === 2 && 
       !this.formControls('email').errors && 
       !this.formControls('telefone').errors && 
-      !this.formControls('senha').errors) {
+      !this.formControls('senha').errors &&
+      !this.usuarioJaCadastrado) {
         
       this.step++;
       this.isSubmitted = false;
@@ -80,6 +82,12 @@ export class CadastroComponent implements OnInit {
       });
     }
   }  
+
+  verifyEmail(email) {
+    this.usuarioService.getUsers().subscribe(response => {
+      response.find(user => user.email === email ? this.usuarioJaCadastrado = true : this.usuarioJaCadastrado = false);
+    })
+  }
 
   formControls(value) {
     return this.form.get(value);
