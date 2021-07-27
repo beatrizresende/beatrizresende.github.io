@@ -40,14 +40,30 @@ footer {
     margin: 10px;
 
   }
+  .text-base {
+
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+
+  }
   .text-center {
 
     text-align: center;
     color: var (--primary);
     
   }
+  .text-center a { 
+    
+    color: var(--text);
+
+  }
   .primary--text {
 
     color: black;
+
+  }
+  .primary--text i { 
+    
+    color: var(--text);
 
   }
