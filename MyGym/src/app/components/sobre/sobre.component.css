@@ -1,0 +1,69 @@
+h2{
+  margin: 5% 0% 2% 0%;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.sobre-container{
+    color: var(--text);
+    background: var(--secundary);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sobre{
+     margin: 5% 5% 2% 5%;
+    text-align: center;
+}
+
+#local{
+
+    width: 50%;
+    
+}
+footer {
+
+    padding: 40px 20px;
+
+  }
+  footer .footer-sociais {
+
+    margin-top: 30px;
+
+  }
+  footer .footer-sociais i {
+
+    font-size: 2rem;
+    margin: 10px;
+
+  }
+  .text-base {
+
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+
+  }
+  .text-center {
+
+    text-align: center;
+    color: var (--primary);
+    
+  }
+  .text-center a { 
+    
+    color: var(--text);
+
+  }
+  .primary--text {
+
+    color: black;
+
+  }
+  .primary--text i { 
+    
+    color: var(--text);
+
+  }

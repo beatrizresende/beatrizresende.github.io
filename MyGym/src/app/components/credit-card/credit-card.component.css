@@ -1,0 +1,65 @@
+.card {
+ margin: 24px 0px 16px 0px;
+ display: inline-block;
+}
+
+.card-content {
+ position: relative;
+ background: var(--primary);
+ width: 350px;
+ height: 200px;
+ border-radius: 0.875rem;
+ padding: 1rem;
+}
+
+.card-icon {
+ position: relative;
+}
+
+.icon-brand img {
+ position: absolute;
+ right: 0;
+ top: 0;
+ width: 70px;
+}
+
+.chip img {
+ position: absolute;
+ width: 50px;
+ display: inline-block;
+}
+
+.card-info {
+ position: absolute;
+ left: 0;
+ bottom: 0;
+}
+
+.card-info-content {
+ padding: 0px 24px 24px 24px;
+}
+
+.card-info-content span {
+ display: block;
+ font-family: "Consolas";
+ font-size: 14px;
+ font-weight: 500;
+ color: var(--text);
+ margin-bottom: 8px;
+}
+
+.card-number {
+ display: flex;
+ align-items: center;  
+}
+
+.card-number span:first-child {
+ padding-bottom: 2px;
+ margin-right: 0.5rem;
+}
+
+.expiration-date-cvc-container {
+ width: 300px;
+ display: flex;
+ justify-content: space-between;
+}
