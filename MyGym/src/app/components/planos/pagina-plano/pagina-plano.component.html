@@ -1,0 +1,11 @@
+<div *ngIf="isLoaded" class="style-default">
+    <div class="plano-container animedown">
+<h1 class="titulo">{{ plano.titulo }}</h1>
+<div class="preco">
+<h2>R${{ plano.preco }}</h2>
+<h3>/mês</h3>
+</div>
+<h4 class="descricao">{{ plano.descricao }}</h4>
+<img class="imagem" src="{{ plano.imgPath }}">
+</div>
+</div>

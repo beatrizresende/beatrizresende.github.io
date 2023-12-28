@@ -1,0 +1,30 @@
+<div class="side-bar-container">
+  <div class="side-bar-container-content">
+    <div class="logo-sidebar">
+      <img src="../../../assets/backgrounds-e-logos/LOGO MYGYM.png" alt="logo">
+      <img src="../../../assets/backgrounds-e-logos/TÍTULO.png" alt="logo">
+    </div>
+    <div class="menu-list">
+      <a 
+        [routerLink]="['/home']" 
+        routerLinkActive="active-route">
+        Home
+      </a>
+      <a 
+        [routerLink]="['/meus-dados']" 
+        routerLinkActive="active-route">
+        Meus Dados
+      </a>
+      <a 
+        [routerLink]="['/planos']" 
+        routerLinkActive="active-route">
+        Planos
+      </a>
+      <a>
+        <div (click)="logout()">
+          Sair
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

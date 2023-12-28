@@ -1,0 +1,63 @@
+{
+
+  "usuarios": [
+    {
+      "nome": "teste",
+      "cpf": "222.222.222-22",
+      "dataNascimento": "10/10/2000",
+      "email": "teste@teste.com",
+      "telefone": "(22) 2222-2222",
+      "senha": "123456",
+      "numeroCartao": "5555 5555 5555 5555",
+      "titular": "teste teste",
+      "validade": "02/27",
+      "cvc": "123",
+      "id": 1
+    }
+  ],
+
+  "planos": [
+    {
+      "imgPath": "../../../../assets/imgs/SARADA-EM-3-MESES.jfif",
+      "titulo": "SARADA EM 3 MESES",
+      "preco": 40,
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupatat non proent, sunt in culpa qui officia deserunt mollit anim  est laborum.",
+      "id": 1
+    },
+    {
+      "imgPath": "../../../../assets/imgs/SAUDÁVEL-&-EQUILIBRADA.jfif",
+      "titulo": "SAUDÁVEL & EQUILIBRADA",
+      "preco": 20,
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupatat non proent, sunt in culpa qui officia deserunt mollit anim est laborum.",
+      "id": 2
+    },
+    {
+      "imgPath": "../../../../assets/imgs/SAÚDE-MENTAL-EM-1º-LUGAR.jfif",
+      "titulo": "SAÚDE MENTAL EM 1º LUGAR",
+      "preco": 20,
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupatat non proent, sunt in culpa qui officia deserunt mollit anim est laborum.",
+      "id": 3
+    },
+    {
+      "imgPath": "../../../../assets/imgs/SUPERE-SEUS-DESAFIOS.jfif",
+      "titulo": "SUPERE SEUS DESAFIOS",
+      "preco": 25,
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupatat non proent, sunt in culpa qui officia deserunt mollit anim est laborum.",
+      "id": 4
+    },
+    {
+      "imgPath": "../../../../assets/imgs/ZEN-&-BEM.jfif",
+      "titulo": "ZEN & BEM",
+      "preco": 45,
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupatat non proent, sunt in culpa qui officia deserunt mollit anim est laborum.",
+      "id": 5
+    },
+    {
+      "imgPath": "../../../../assets/imgs/NOVAS-BUDAS.jfif",
+      "titulo": "NOVAS-BUDAS",
+      "preco": 35,
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupatat non proent, sunt in culpa qui officia deserunt mollit anim est laborum.",
+      "id": 6
+    }
+  ]
+}

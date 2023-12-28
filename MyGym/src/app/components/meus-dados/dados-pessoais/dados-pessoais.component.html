@@ -1,0 +1,26 @@
+<div class="collapse-dados-container" *ngIf="user">
+  <div class="collapse-dados-container-header" (click)="isOpen = !isOpen">
+    <div class="collapse-dados-container-title">
+      Dados Pessoais
+    </div>
+    <div class="collapse-dados-icon" [ngClass]="{'__is-open': isOpen}">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </div>
+  <div class="collapse-dados-container-content" *ngIf="isOpen">
+    <ul class="lista-dados">
+      <li>
+        <span>Nome</span>
+        <span>{{ user.nome }}</span>
+      </li>
+      <li>
+        <span>Cpf</span>
+        <span>{{ user.cpf }}</span>
+      </li>
+      <li>
+        <span>Data de nascimento</span>
+        <span>{{ user.dataNascimento }}</span>
+      </li>
+    </ul>
+  </div>
+</div>
